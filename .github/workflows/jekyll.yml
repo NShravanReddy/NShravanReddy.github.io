@@ -1,4 +1,4 @@
-name: Deploy Jekyll Site in Docs Folder
+name: Deploy Jekyll Site from Docs to GitHub Pages
 
 on:
   push:
@@ -27,13 +27,12 @@ jobs:
       - name: Build Jekyll Site
         run: |
           cd docs
-          bundle exec jekyll build  # Builds site inside docs/_site/
+          bundle exec jekyll build  # Outputs to docs/_site by default
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages (gh-pages branch)
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: docs/_site  # Deploy built site
-          publish_branch: main
-          keep_files: true
-          enable_jekyll: false  # Disable GitHub Pages Jekyll processing
+          publish_branch: gh-pages  # <== This is where the magic happens!
+          publish_dir: docs/_site
+          enable_jekyll: false
