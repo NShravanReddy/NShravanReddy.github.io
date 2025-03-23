@@ -1,0 +1,39 @@
+name: Deploy Jekyll Site in Docs Folder
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+          bundler-cache: true
+
+      - name: Install Jekyll and Dependencies
+        run: |
+          cd docs
+          bundle install || bundle update
+
+      - name: Build Jekyll Site
+        run: |
+          cd docs
+          bundle exec jekyll build  # Builds site inside docs/_site/
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs/_site  # Deploy built site
+          publish_branch: main
+          keep_files: true
+          enable_jekyll: false  # Disable GitHub Pages Jekyll processing

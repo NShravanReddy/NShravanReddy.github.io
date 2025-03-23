@@ -1,0 +1,9 @@
+title: My Portfolio
+description: A portfolio website showcasing my projects and research.
+baseurl: ""
+url: "https://nshravanreddy.github.io" # This is your GitHub Pages URL
+theme: minima # You can choose a different theme if desired
+
+# Optional settings
+markdown: kramdown
+permalink: pretty
