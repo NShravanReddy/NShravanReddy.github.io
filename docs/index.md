@@ -5,9 +5,6 @@ title: Home
 
 # 👋 Hi, I'm Shravan Reddy
 
-### 
-
-
 ## My Recent Projects
 
 1. **Trained a Llama 8B Model on Custom Dataset**  
