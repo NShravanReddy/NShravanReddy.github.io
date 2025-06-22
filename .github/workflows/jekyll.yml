@@ -1,0 +1,38 @@
+name: Deploy Jekyll Site from Docs to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+          bundler-cache: true
+
+      - name: Install Jekyll and Dependencies
+        run: |
+          cd docs
+          bundle install || bundle update
+
+      - name: Build Jekyll Site
+        run: |
+          cd docs
+          bundle exec jekyll build  # Outputs to docs/_site by default
+
+      - name: Deploy to GitHub Pages (gh-pages branch)
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages  # <== This is where the magic happens!
+          publish_dir: docs/_site
+          enable_jekyll: false
