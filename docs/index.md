@@ -5,7 +5,22 @@ title: Home
 
 # 👋 Hi, I'm Shravan Reddy
 
+
+## Hackathon Projects
+
+1.  **AMD AI Sprint Hackathon 2025 - 4th Place**
+    Participated in the AMD AI Sprint Hackathon 2025 at the Indian Institute of Science (IISc), sponsored by Hugging Face and Meta. Our team secured 4th place by building a Question Agent and Answer Agent using Qwen3-4B for an IPL-style game.
+    [Explore the Repository](https://github.com/NShravanReddy/AMD_AI_AGENTS)
+
+2.  **LLM-Kernel-Agent (Cerebras Inference API Agent)**
+    A vibe coded project that combines LLMs with kernel functions, leveraging the Cerebras Inference API with the model: llama-4-scout-17b-16e-instruct in Cerebras x Cline during the Vibe Coder Hackathon. This project builds upon the AMD Hackathon project, using the same template and incorporating improvements. The agent accepts high-level natural language prompts, generates optimized Triton GPU kernel code, uses Cerebras as the inference backend, provides a Streamlit UI with secure API key input, and handles UTF-8 content.
+    [View Streamlit App](https://llm-kernel.streamlit.app)
+    [Explore the Repository](https://github.com/NShravanReddy/LLM-Kernel-Agent/)
+    [View Video](https://youtu.be/qYiEmmdFaK8)
+
+
 ## My Recent Projects
+
 
 1. **Trained a Llama 8B Model on Custom Dataset**  
    Implemented in Google Colab.  
