@@ -8,11 +8,18 @@ title: Home
 
 ## Hackathon Projects
 
-1.  **AMD AI Sprint Hackathon 2025 - 4th Place**
+1.  **OpenAI Open Model Hackathon**
+    Fine-tuned the gpt oss model with the expectation to generate kernels using the 120b model, but encountered an OOM error and switched to the 20b model. First, I experimented with fine-tuning a smaller model, using a 1b model from Meta, which I was able to fine-tune: [llama-3.2-1b-instruct-triton-kernel](https://huggingface.co/Nadiveedishravanreddy/llama-3.2-1b-instruct-triton-kernel).
+
+    Finally, I was able to fine-tune by creating a custom dataset: [KernelBook-messages](https://huggingface.co/datasets/Nadiveedishravanreddy/KernelBook-messages). The peft fine-tuning took 4 hrs 55 min. I have uploaded the whole model and its weights in the hf: [gpt-oss-20b-triton-kernel](https://huggingface.co/Nadiveedishravanreddy/gpt-oss-20b-triton-kernel).
+
+    [View Research Document](https://nsr6.notion.site/Create-an-llm-agent-to-write-triton-kernels-24205b97e27e80708b23e54cfb4b96fd?source=copy_link)
+
+2.  **AMD AI Sprint Hackathon 2025 - 4th Place**
     Participated in the AMD AI Sprint Hackathon 2025 at the Indian Institute of Science (IISc), sponsored by Hugging Face and Meta. Our team secured 4th place by building a Question Agent and Answer Agent using Qwen3-4B for an IPL-style game.
     [Explore the Repository](https://github.com/NShravanReddy/AMD_AI_AGENTS)
 
-2.  **LLM-Kernel-Agent (Cerebras Inference API Agent)**
+3.  **LLM-Kernel-Agent (Cerebras Inference API Agent)**
     A vibe coded project that combines LLMs with kernel functions, leveraging the Cerebras Inference API with the model: llama-4-scout-17b-16e-instruct in Cerebras x Cline during the Vibe Coder Hackathon. This project builds upon the AMD Hackathon project, using the same template and incorporating improvements. The agent accepts high-level natural language prompts, generates optimized Triton GPU kernel code, uses Cerebras as the inference backend, provides a Streamlit UI with secure API key input, and handles UTF-8 content.
     [View Streamlit App](https://llm-kernel.streamlit.app)
     [Explore the Repository](https://github.com/NShravanReddy/LLM-Kernel-Agent/)
@@ -36,7 +43,7 @@ title: Home
 
 4. **Data Structures and Algorithms Repository**  
    A comprehensive collection of data structures and algorithms implementations in various programming languages, including solutions to common coding problems and interview questions.  
-   [Explore the Repository](https://nshravanreddy.github.io/dsa/)
+   [Explore the Repository](https://github.com/NShravanReddy/dsa)
 
 
 
