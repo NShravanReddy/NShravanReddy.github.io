@@ -1,0 +1,9 @@
+title: "Shravan's Blog"
+description: "Thoughts, ideas, and observations."
+baseurl: "/blogs"                # The subpath of your blog
+url: "https://nshravanreddy.github.io"
+theme: minima
+plugins:
+  - jekyll-feed
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
