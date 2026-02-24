@@ -5,6 +5,35 @@ title: Home
 
 # 👋 Hi, I'm Shravan Reddy
 
+Cloud Data Engineer building scalable ETL pipelines on GCP.  
+I design production-grade Airflow workflows, distributed data systems, and high-performance ML pipelines.
+
+---
+
+## 🏏 Data Engineering Projects
+
+### 1. **Cricket Statistics Data Pipeline (GCP + Airflow + BigQuery)**
+
+A cloud-native end-to-end ETL pipeline that extracts ODI cricket rankings from the Cricbuzz API, processes them using Google Cloud services, and loads structured data into BigQuery for analytics.
+
+**Tech Stack:** Python, Apache Airflow, Google Cloud Storage, Dataflow, BigQuery, Cloud Functions, Pub/Sub
+
+**Architecture Flow:**
+- Extract → Cricbuzz API ingestion  
+- Load → Raw storage in GCS  
+- Transform → Dataflow with UDF processing  
+- Load → Structured BigQuery analytics table  
+
+**Engineering Highlights:**
+- Automated API ingestion with Python  
+- Orchestrated DAG scheduling using Airflow  
+- Serverless event-driven architecture  
+- Scalable transformation using Dataflow  
+- BigQuery schema modeling  
+- Monitoring & logging for reliability  
+
+---
+
 
 ## Hackathon Projects
 
@@ -26,26 +55,32 @@ title: Home
     [View Video](https://youtu.be/qYiEmmdFaK8)
 
 
-## My Recent Projects
-
-
-1. **Trained a Llama 8B Model on Custom Dataset**  
-   Implemented in Google Colab.  
-   [View Project](https://github.com/NShravanReddy/SatvickRecipe/blob/master/satvick_recipe_model_gradio.ipynb)
-
-2. **AMD GPU Kernel Optimization Challenge – My Experience**  
+4. **AMD GPU Kernel Optimization Challenge – My Experience**  
    In April 2025, I participated in AMD's FP8 GEMM Kernel Optimization Challenge. The task involved writing high-performance matrix multiplication kernels for MI300X GPUs using the Triton framework, targeting FP8 inputs (E4M3FNUZ) and BF16 outputs with per-group scaling.  
    [View Documentation](https://nshravanreddy.github.io/DeepLearning/)
 
-3. **Deep Learning Repository**  
-   This repository contains various resources, implementations, and discussions related to deep learning concepts, including neural networks, optimization techniques, and large language models.  
-   [Explore the Repository](https://github.com/NShravanReddy/DeepLearning.git)
+## Blog Posts
 
-4. **Data Structures and Algorithms Repository**  
-   A comprehensive collection of data structures and algorithms implementations in various programming languages, including solutions to common coding problems and interview questions.  
-   [Explore the Repository](https://github.com/NShravanReddy/dsa)
+- [GPT-OSS-20B-Triton-Kernel: Fine-Tuning a 20B Model to Generate GPU Kernels](/blogs/2025/10/24/gpt-oss-20b-triton-kernel/)
+- [Introduction to Weight Quantization](/blogs/2024/02/24/introduction-to-weight-quantization/)
+- [Downloading the LLM model from Hugging Face](/blogs/2024/01/01/downloading-llm-from-hf/)
+
+## My Recent Projects
 
 
+1. **Satvick Recipe Model – Llama 8B on Custom Dataset**  
+   - [Notebook (GitHub)](https://github.com/NShravanReddy/SatvickRecipe/blob/master/satvick_recipe_model_gradio.ipynb)  
+   - [Colab](https://colab.research.google.com/drive/1vhMHTafkyciJ3mzmLWUUuL5cVcDhkvi3?usp=sharing)
+
+2. **Ollama + Unsloth + Llama-3 + CSV Finetuning**  
+   - [Colab](https://colab.research.google.com/drive/1VYkncZMfGFkeCEgN2IzbZIKEDkyQuJAS?usp=sharing)
+
+3. **llama_3.2_1b_finetuning_rocm.ipynb**  
+   - [Colab](https://colab.research.google.com/drive/1kMcfDdielE1myo1arlFU7pqBPwU08I9B?usp=sharing)
+
+4. **DeepLearning – End-to-End DL & LLM Engineering Repo**  
+   A hands-on lab-style repository covering deep neural networks from scratch, optimization and regularization, transformers, ML system design, prompt engineering, LLM post-training, experiment tracking, and LLM tooling (Ollama, `llm` CLI, Perplexica, Inspect AI, NNI, etc.).  
+   - [Explore the Repository](https://github.com/NShravanReddy/DeepLearning)
 
 ---
 
