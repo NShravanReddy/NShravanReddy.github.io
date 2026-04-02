@@ -80,13 +80,13 @@ A cloud-native end-to-end ETL pipeline that extracts ODI cricket rankings from t
 
 ## Blog Posts
 
-- [UV] (https://www.notion.so/nsr6/UV-18905b97e27e8063926dec9973e3996f) - Jan 28, 2025
-- [AWS] (https://nsr6.notion.site/AWS-a70b1f8b7ba344bab19ed7df3e9eff7f) - Jan 1, 2024
+- [UV](https://www.notion.so/nsr6/UV-18905b97e27e8063926dec9973e3996f) - Jan 28, 2025
+- [AWS](https://nsr6.notion.site/AWS-a70b1f8b7ba344bab19ed7df3e9eff7f) - Jan 1, 2024
 - [GPT-OSS-20B-Triton-Kernel: Fine-Tuning a 20B Model to Generate GPU Kernels](/blogs/2025/10/24/gpt-oss-20b-triton-kernel/)
 - [Introduction to Weight Quantization](/blogs/2024/02/24/introduction-to-weight-quantization/)
 - [Downloading the LLM model from Hugging Face](/blogs/2024/01/01/downloading-llm-from-hf/)
 
-## My Recent Projects
+## LLM Projects
 
 
 1. **Satvick Recipe Model – Llama 8B on Custom Dataset**  
