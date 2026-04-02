@@ -6,13 +6,32 @@ title: Home
 # Hi, I'm Shravan Reddy
 
 Cloud Data Engineer building scalable ETL pipelines on GCP.  
-I design production-grade Airflow workflows, distributed data systems, and high-performance ML pipelines.
+I design,develop production-grade Airflow workflows, distributed data systems
 
 ---
 
 ## Data Engineering Projects
 
-### 1. **Cricket Statistics Data Pipeline (GCP + Airflow + BigQuery)**
+### 1. **Streaming Data Processing Pipeline**
+
+A real-time data processing pipeline using **Apache Flink** (PyFlink), **Kafka** (Redpanda), and **PostgreSQL** to process NYC taxi ride events. This project demonstrates streaming data ingestion, transformation, and storage.
+
+**Tech Stack:** Python, Apache Flink (PyFlink), Kafka (Redpanda), PostgreSQL, Docker
+
+**Key Features:**
+- Real-time data producers generating NYC taxi ride events
+- Stream processing with Apache Flink (PyFlink)
+- Multiple processing strategies (pass-through and time-windowed aggregations)
+- Event watermarking for handling late-arriving data
+- Checkpointing for fault tolerance
+- Docker Compose setup for local development
+
+**Architecture:**
+- Kafka Producer (rides topic) → Redpanda (Kafka) → Flink Jobs → PostgreSQL
+
+**Repository:** [GitHub](https://github.com/NShravanReddy/streaming)
+
+### 2. **Cricket Statistics Data Pipeline (GCP + Airflow + BigQuery)**
 
 A cloud-native end-to-end ETL pipeline that extracts ODI cricket rankings from the Cricbuzz API, processes them using Google Cloud services, and loads structured data into BigQuery for analytics.
 
