@@ -12,44 +12,12 @@ I design,develop production-grade Airflow workflows, distributed data systems
 
 ## Data Engineering Projects
 
-### 1. **Streaming Data Processing Pipeline**
-
-A real-time data processing pipeline using **Apache Flink** (PyFlink), **Kafka** (Redpanda), and **PostgreSQL** to process NYC taxi ride events. This project demonstrates streaming data ingestion, transformation, and storage.
-
+### 1. [**Streaming Data Processing Pipeline**](/2026/04/02/1_streaming_data_processing_pipeline/)
 **Tech Stack:** Python, Apache Flink (PyFlink), Kafka (Redpanda), PostgreSQL, Docker
 
-**Key Features:**
-- Real-time data producers generating NYC taxi ride events
-- Stream processing with Apache Flink (PyFlink)
-- Multiple processing strategies (pass-through and time-windowed aggregations)
-- Event watermarking for handling late-arriving data
-- Checkpointing for fault tolerance
-- Docker Compose setup for local development
-
-**Architecture:**
-- Kafka Producer (rides topic) → Redpanda (Kafka) → Flink Jobs → PostgreSQL
-
-**Repository:** [GitHub](https://github.com/NShravanReddy/streaming)
-
-### 2. **Cricket Statistics Data Pipeline (GCP + Airflow + BigQuery)**
-
-A cloud-native end-to-end ETL pipeline that extracts ODI cricket rankings from the Cricbuzz API, processes them using Google Cloud services, and loads structured data into BigQuery for analytics.
-
+### 2. [**Cricket Statistics Data Pipeline**](/2026/02/16/2_cricket_analytics_pipeline/)
 **Tech Stack:** Python, Apache Airflow, Google Cloud Storage, Dataflow, BigQuery, Cloud Functions, Pub/Sub
 
-**Architecture Flow:**
-- Extract → Cricbuzz API ingestion  
-- Load → Raw storage in GCS  
-- Transform → Dataflow with UDF processing  
-- Load → Structured BigQuery analytics table  
-
-**Engineering Highlights:**
-- Automated API ingestion with Python  
-- Orchestrated DAG scheduling using Airflow  
-- Serverless event-driven architecture  
-- Scalable transformation using Dataflow  
-- BigQuery schema modeling  
-- Monitoring & logging for reliability  
 
 ---
 
