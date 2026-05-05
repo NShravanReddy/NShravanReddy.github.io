@@ -11,6 +11,18 @@ This loop automatically lists all posts in _posts/, sorted by date (newest first
 
 <ul style="list-style: none; padding-left: 0;">
   <li style="margin-bottom: 1em;">
+    <div style="color: #888;">May 5, 2026</div>
+    <a href="https://www.notion.so/nsr6/Pyspark-34905b97e27e80a7a976cd786db8bd3b" style="font-size: 1.1em; font-weight: 600; text-decoration: none; color: #007acc;">
+      Pyspark
+    </a>
+  </li>
+  <li style="margin-bottom: 1em;">
+    <div style="color: #888;">May 1, 2026</div>
+    <a href="https://www.notion.so/nsr6/Introduction-to-Batch-Processing-34905b97e27e80deb046d9d5bb2ada99" style="font-size: 1.1em; font-weight: 600; text-decoration: none; color: #007acc;">
+      Introduction to Batch Processing
+    </a>
+  </li>
+  <li style="margin-bottom: 1em;">
     <div style="color: #888;">Oct 24, 2025</div>
     <a href="/blogs/2025/10/24/gpt-oss-20b-triton-kernel/" style="font-size: 1.1em; font-weight: 600; text-decoration: none; color: #007acc;">
       GPT-OSS-20B-Triton-Kernel: Fine-Tuning a 20B Model to Generate GPU Kernels
@@ -88,14 +100,6 @@ This loop automatically lists all posts in _posts/, sorted by date (newest first
       Python on Hashnode
     </a>
   </li>
-  {% for post in site.posts %}
-    <li style="margin-bottom: 1em;">
-      <div style="color: #888;">{{ post.date | date: "%b %d, %Y" }}</div>
-      <a href="{{ post.url | relative_url }}" style="font-size: 1.1em; font-weight: 600; text-decoration: none; color: #007acc;">
-        {{ post.title }}
-      </a>
-    </li>
-  {% endfor %}
 </ul>
 
 ---

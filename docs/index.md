@@ -48,47 +48,19 @@ I design,develop production-grade Airflow workflows, distributed data systems
 
 ## Blog Posts
 
+- [Pyspark](https://www.notion.so/nsr6/Pyspark-34905b97e27e80a7a976cd786db8bd3b) - May 5, 2026
+- [Introduction to Batch Processing](https://www.notion.so/nsr6/Introduction-to-Batch-Processing-34905b97e27e80deb046d9d5bb2ada99) - May 1, 2026
 - [GPT-OSS-20B-Triton-Kernel: Fine-Tuning a 20B Model to Generate GPU Kernels](/blogs/2025/10/24/gpt-oss-20b-triton-kernel/) - Oct 24, 2025
 - [UV](https://www.notion.so/nsr6/UV-18905b97e27e8063926dec9973e3996f) - Jan 28, 2025
-
 - [Installing PyTorch on ARM Mac (M1/M2/M3)](https://heymachinelearning.hashnode.dev/installing-pytorch-on-arm-macm1m2m3) - May 2, 2024
 - [Introduction to Weight Quantization](/blogs/2024/02/24/introduction-to-weight-quantization/) - Feb 24, 2024
 - [Installing TensorFlow on Mac M1](https://www.notion.so/nsr6/Installing-tensor-flow-on-Mac-m1-629604ff25274165b0d23c0cbdb064d0?source=copy_link) - Jan 10, 2024
 - [AWS](https://nsr6.notion.site/AWS-a70b1f8b7ba344bab19ed7df3e9eff7f) - Jan 1, 2024
 - [Downloading the LLM model from Hugging Face](/blogs/2024/01/01/downloading-llm-from-hf/) - Jan 1, 2024
-
 - [Installing TensorFlow on ARM Mac (M1/M2/M3)](https://heymachinelearning.hashnode.dev/installing-tensor-flow-on-arm-macm1m2m3) - 2024
 - [Neural Networks](https://heymachinelearning.hashnode.dev/neural-networks) - 2024
 - [Functions of Machine Learning](https://heymachinelearning.hashnode.dev/functions-of-machine-learning) - 2024
 - [Types of Machine Learning](https://heymachinelearning.hashnode.dev/types-of-machine-learning) - 2024
-
 - [Tensorflow](https://www.notion.so/nsr6/Tensorflow-2bc1c8d79a65489aa77b2c842d1a0d1b?source=copy_link) - Dec 18, 2023 to Jan 12, 2024
 - [Python on Hashnode](https://nsrai.hashnode.dev/python-1) - Jul 7, 2023
-## LLM Projects
-
-
-1. **Satvick Recipe Model – Llama 8B on Custom Dataset**  
-   - [Notebook (GitHub)](https://github.com/NShravanReddy/SatvickRecipe/blob/master/satvick_recipe_model_gradio.ipynb)  
-   - [Colab](https://colab.research.google.com/drive/1vhMHTafkyciJ3mzmLWUUuL5cVcDhkvi3?usp=sharing)
-
-2. **Ollama + Unsloth + Llama-3 + CSV Finetuning**  
-   - [Colab](https://colab.research.google.com/drive/1VYkncZMfGFkeCEgN2IzbZIKEDkyQuJAS?usp=sharing)
-
-3. **llama_3.2_1b_finetuning_rocm.ipynb**  
-   - [Colab](https://colab.research.google.com/drive/1kMcfDdielE1myo1arlFU7pqBPwU08I9B?usp=sharing)
-
-4. **DeepLearning – End-to-End DL & LLM Engineering Repo**  
-   A hands-on lab-style repository covering deep neural networks from scratch, optimization and regularization, transformers, ML system design, prompt engineering, LLM post-training, experiment tracking, and LLM tooling (Ollama, `llm` CLI, Perplexica, Inspect AI, NNI, etc.).  
-   - [Explore the Repository](https://github.com/NShravanReddy/DeepLearning)
-
----
-
-<footer>
-  <div style="text-align: center; padding: 20px; border-top: 1px solid #eee; margin-top: 40px;">
-    <p>&copy; 2025 Shravan Reddy</p>
-    <div style="margin-top: 10px;">
-      <a href="https://github.com/NShravanReddy" style="margin: 0 10px; text-decoration: none; color: #333; font-size: 24px;">Github</a>
-      <a href="https://" style="margin: 0 10px; text-decoration: none; color: #333; font-size: 24px;">X</a>
-    </div>
-  </div>
-</footer>
+- [llama_3.2_1b_finetuning_rocm.ipynb](https://colab.research.google.com/drive/1kMcfDdielE1myo1arlFU7pqBPwU08I9B?usp=sharing)
