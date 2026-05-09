@@ -1,8 +1,9 @@
 ---
 layout: post
-title: "2_Cricket_Analytics_Pipeline"
+title: "Cricket Analytics Pipeline"
 date: 2026-02-16
 categories: data-engineering
+permalink: /blogs/2026/02/16/cricket_analytics_pipeline/
 ---
 
 ### 2. **Cricket Statistics Data Pipeline (GCP + Airflow + BigQuery)**
