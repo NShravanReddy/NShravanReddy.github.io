@@ -1,8 +1,9 @@
 ---
 layout: post
-title: "1_Streaming_Data_Processing_Pipeline"
+title: "Streaming Data Processing Pipeline"
 date: 2026-04-02
 categories: data-engineering
+permalink: /blogs/2026/04/02/streaming_data_processing_pipeline/
 ---
 
 ### 1. **Streaming Data Processing Pipeline**
