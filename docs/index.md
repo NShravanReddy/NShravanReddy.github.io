@@ -12,10 +12,10 @@ I design,develop production-grade Airflow workflows, distributed data systems
 
 ## Data Engineering Projects
 
-### 1. [**Streaming Data Processing Pipeline**](/docs/blogs/_posts/2026-04-02-1_streaming_data_processing_pipeline.md)
+### 1. [**Streaming Data Processing Pipeline**](/2026/04/02/1_streaming_data_processing_pipeline/)
 **Tech Stack:** Python, Apache Flink (PyFlink), Kafka (Redpanda), PostgreSQL, Docker
 
-### 2. [**Cricket Statistics Data Pipeline**](/docs/blogs/_posts/2026-02-16-2_cricket_analytics_pipeline.md)
+### 2. [**Cricket Statistics Data Pipeline**](/2026/02/16/2_cricket_analytics_pipeline/)
 **Tech Stack:** Python, Apache Airflow, Google Cloud Storage, Dataflow, BigQuery, Cloud Functions, Pub/Sub
 
 
