@@ -11,6 +11,12 @@ This loop automatically lists all posts in _posts/, sorted by date (newest first
 
 <ul style="list-style: none; padding-left: 0;">
   <li style="margin-bottom: 1em;">
+    <div style="color: #888;">May 24, 2026</div>
+    <a href="https://nsr6.notion.site/36205b97e27e808db853dfaf8f9ec989?v=36a05b97e27e8007bf25000c39a9337a" style="font-size: 1.1em; font-weight: 600; text-decoration: none; color: #007acc;">
+      (Kimball's) Dimensional Modelling
+    </a>
+  </li>
+  <li style="margin-bottom: 1em;">
     <div style="color: #888;">May 5, 2026</div>
     <a href="https://www.notion.so/nsr6/Pyspark-34905b97e27e80a7a976cd786db8bd3b" style="font-size: 1.1em; font-weight: 600; text-decoration: none; color: #007acc;">
       Pyspark
