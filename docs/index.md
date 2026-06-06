@@ -48,6 +48,7 @@ I design,develop production-grade Airflow workflows, distributed data systems
 
 ## Blog Posts
 
+- [Dataform](https://app.notion.com/p/nsr6/Dataform-37705b97e27e80cd8b6cd7f6cea192e6) - Jun 6, 2026
 - [(Kimball's) Dimensional Modelling](https://nsr6.notion.site/36205b97e27e808db853dfaf8f9ec989?v=36a05b97e27e8007bf25000c39a9337a) - May 24, 2026
 - [Pyspark](https://www.notion.so/nsr6/Pyspark-34905b97e27e80a7a976cd786db8bd3b) - May 5, 2026
 - [Introduction to Batch Processing](https://www.notion.so/nsr6/Introduction-to-Batch-Processing-34905b97e27e80deb046d9d5bb2ada99) - May 1, 2026

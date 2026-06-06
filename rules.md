@@ -1,5 +1,6 @@
 
-
+# rule for git
+ask me before commit and pushing to github
 
 # blogs location
 
@@ -24,16 +25,6 @@ YYYY-MM-DD_change_that_we_did
 
 # workflow (order of operations)
 
-1. FIRST — make code changes (edit files, add features, fix bugs, etc.)
-2. SECOND — commit the code changes with message format:
-   YYYY-MM-DD_change_description
-   Example: 2026-05-24_added_dimensional_modelling_blog_entry
-
-3. THIRD — update logs:
-   - Create/update conversation note in logs/YEAR/conversations/
-   - Create/update monthly log in logs/YEAR/MM-Month.md
-   - Follow .github/instructions.md for exact log format
-
-4. FOURTH — commit the log files with message format:
-   YYYY-MM-DD_logs_description
-   Example: 2026-05-24_logs_blogs_index_update
+1. Make all code changes + update logs (see #logs section for format)
+2. Commit everything in one go with format: YYYY-MM-DD_change_description
+   Example: 2026-05-24_added_dimensional_modelling_and_updated_rules

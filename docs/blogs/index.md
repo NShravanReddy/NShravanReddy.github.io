@@ -11,6 +11,12 @@ This loop automatically lists all posts in _posts/, sorted by date (newest first
 
 <ul style="list-style: none; padding-left: 0;">
   <li style="margin-bottom: 1em;">
+    <div style="color: #888;">Jun 6, 2026</div>
+    <a href="https://app.notion.com/p/nsr6/Dataform-37705b97e27e80cd8b6cd7f6cea192e6" style="font-size: 1.1em; font-weight: 600; text-decoration: none; color: #007acc;">
+      Dataform
+    </a>
+  </li>
+  <li style="margin-bottom: 1em;">
     <div style="color: #888;">May 24, 2026</div>
     <a href="https://nsr6.notion.site/36205b97e27e808db853dfaf8f9ec989?v=36a05b97e27e8007bf25000c39a9337a" style="font-size: 1.1em; font-weight: 600; text-decoration: none; color: #007acc;">
       (Kimball's) Dimensional Modelling
