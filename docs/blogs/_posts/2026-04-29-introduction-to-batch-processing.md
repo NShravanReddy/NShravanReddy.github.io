@@ -25,4 +25,5 @@ tags: [Data Engineering, Batch Processing, Streaming]
 
 ---
 
-[Notion](https://app.notion.com/p/nsr6/Introduction-to-batch-processing-...)*
+[Notion](https://nsr6.notion.site/Introduction-to-Batch-Processing-34905b97e27e80deb046d9d5bb2ada99)*
+[Notion](https://nsr6.notion.site/Pyspark-34905b97e27e80a7a976cd786db8bd3b)*
