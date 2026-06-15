@@ -141,4 +141,4 @@ python -m gpt_oss.generate --backend triton gpt-oss-20b/original/
 
 ---
 
-[Notion](https://app.notion.com/p/nsr6/Create-an-llm-agent-to-write-triton-kernels-24205b97e27e80708b23e54cfb4b96fd)*
+[Notion](https://app.notion.com/p/nsr6/Create-an-llm-agent-to-write-triton-kernels-24205b97e27e80708b23e54cfb4b96fd)

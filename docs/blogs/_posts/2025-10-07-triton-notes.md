@@ -47,4 +47,4 @@ Reading DeepSeek paper 2.1 completed.
 
 ---
 
-[Notion](https://app.notion.com/p/nsr6/Triton-1e405b97e27e800bb7dec1ce8b4419de)*
+[Notion](https://app.notion.com/p/nsr6/Triton-1e405b97e27e800bb7dec1ce8b4419de)

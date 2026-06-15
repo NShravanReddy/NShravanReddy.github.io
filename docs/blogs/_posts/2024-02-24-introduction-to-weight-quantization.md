@@ -97,4 +97,4 @@ Reduces the amount of bits required to represent each parameter, converting floa
 
 ---
 
-[Notion](https://app.notion.com/p/nsr6/2bc1c8d79a65489aa77b2c842d1a0d1b)*
+[Notion](https://app.notion.com/p/nsr6/2bc1c8d79a65489aa77b2c842d1a0d1b)

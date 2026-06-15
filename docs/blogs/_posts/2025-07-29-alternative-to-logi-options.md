@@ -15,4 +15,4 @@ Alternatives to Logitech's Logi Options+ software for macOS:
 
 ---
 
-[Notion](https://app.notion.com/p/nsr6/7e3160a626bd407e8405bf92af9e9415)*
+[Notion](https://app.notion.com/p/nsr6/7e3160a626bd407e8405bf92af9e9415)

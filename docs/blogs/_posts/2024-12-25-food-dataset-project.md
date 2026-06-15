@@ -96,4 +96,4 @@ git filter-repo --path .env --invert-paths --force
 
 ---
 
-[Notion](https://app.notion.com/p/nsr6/Food-data-set-and-project-full-details-16705b97e27e800e8316cb9aad09dac3)*
+[Notion](https://app.notion.com/p/nsr6/Food-data-set-and-project-full-details-16705b97e27e800e8316cb9aad09dac3)

@@ -69,5 +69,5 @@ output = model(model_inputs)
 
 ---
 
-[Notion](https://app.notion.com/p/nsr6/Hugging-face-chapter-2-37f05b97e27e80b99697e277c3f5bfc9)*
+[Notion](https://app.notion.com/p/nsr6/Hugging-face-chapter-2-37f05b97e27e80b99697e277c3f5bfc9)
 

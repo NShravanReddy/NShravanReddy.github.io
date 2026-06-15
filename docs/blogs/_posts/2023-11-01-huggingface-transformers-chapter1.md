@@ -42,5 +42,5 @@ Encoder-decoder models (also called *sequence-to-sequence models*) are used in g
 
 ---
 
-[Notion](https://app.notion.com/p/nsr6/Hugging-face-Transformers-working-chapter-1-37f05b97e27e800f86c8c0e355766187)*
+[Notion](https://app.notion.com/p/nsr6/Hugging-face-Transformers-working-chapter-1-37f05b97e27e800f86c8c0e355766187)
 
