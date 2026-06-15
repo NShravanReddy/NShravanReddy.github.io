@@ -18,7 +18,7 @@ Notes on Triton GPU kernel programming, MoE, and MLA.
 
 ### MoE (Mixture of Experts)
 
-![moe.png](/docs/blogs/images/moe.png)
+![moe.png](/blogs/images/moe.png)
 
 An expert consists of input, a linear neural network 1, passing the output through activation, then to linear 2 and output.
 

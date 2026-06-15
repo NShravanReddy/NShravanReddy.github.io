@@ -71,7 +71,7 @@ It does the job:
 "i write rewrite and [UNK] rewrite again"
 ```
 
-![Screenshot 2023-10-31 at 7.37.14 PM.png](/docs/blogs/images/Screenshot_2023-10-31_at_7.37.14_PM.png)
+![Screenshot 2023-10-31 at 7.37.14 PM.png](/blogs/images/Screenshot_2023-10-31_at_7.37.14_PM.png)
 
 ---
 

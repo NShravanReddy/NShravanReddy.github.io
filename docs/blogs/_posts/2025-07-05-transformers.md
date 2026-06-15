@@ -64,7 +64,7 @@ It has the two blocks
 1. Encoder block
 2. Decoder block
 
-![encoder 2025-06-21 at 4.09.14 PM.png](/docs/blogs/images/encoder_2025-06-21_at_4.09.14_PM.png)
+![encoder 2025-06-21 at 4.09.14 PM.png](/blogs/images/encoder_2025-06-21_at_4.09.14_PM.png)
 
 # Encoder Block
 

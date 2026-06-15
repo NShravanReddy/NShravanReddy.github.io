@@ -23,7 +23,7 @@ A straightforward technique where the weights of an already trained model are co
 
 Incorporates the weight conversion process during the pre-training or fine-tuning stage, resulting in enhanced model performance. However, QAT is computationally expensive and demands representative training data.
 
-![Screenshot 2025-02-03 at 11.44.54 AM.png](/docs/blogs/images/Screenshot_2025-02-03_at_11.44.54_AM.png)
+![Screenshot 2025-02-03 at 11.44.54 AM.png](/blogs/images/Screenshot_2025-02-03_at_11.44.54_AM.png)
 
 ---
 
@@ -91,9 +91,9 @@ A script is provided to quantize models. Converting large models can be somewhat
 
 Reduces the amount of bits required to represent each parameter, converting floating point into integers.
 
-![image.png](/docs/blogs/images/image.png)
-![Screenshot 2025-02-08 at 3.50.55 PM.png](/docs/blogs/images/Screenshot_2025-02-08_at_3.50.55_PM.png)
-![Screenshot 2025-02-08 at 3.52.35 PM.png](/docs/blogs/images/Screenshot_2025-02-08_at_3.52.35_PM.png)
+![image.png](/blogs/images/image.png)
+![Screenshot 2025-02-08 at 3.50.55 PM.png](/blogs/images/Screenshot_2025-02-08_at_3.50.55_PM.png)
+![Screenshot 2025-02-08 at 3.52.35 PM.png](/blogs/images/Screenshot_2025-02-08_at_3.52.35_PM.png)
 
 ---
 
