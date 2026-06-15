@@ -25,4 +25,3 @@ A real-time data processing pipeline using **Apache Flink** (PyFlink), **Kafka**
 
 **Repository:** [GitHub](https://github.com/NShravanReddy/streaming)
 
-[Notion](https://nsr6.notion.site/Pyspark-34905b97e27e80a7a976cd786db8bd3b)*

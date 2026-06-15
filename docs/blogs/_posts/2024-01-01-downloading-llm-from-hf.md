@@ -47,4 +47,3 @@ snapshot_download(
 [**Downloading the LLM model from hf – full notes**](https://www.notion.so/Downloading-the-llm-model-from-hf-24e05b97e27e8028a423deb02df17484?pvs=21)
 
 
-[Notion](https://nsr6.notion.site/Pyspark-34905b97e27e80a7a976cd786db8bd3b)*

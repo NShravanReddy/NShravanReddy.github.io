@@ -28,4 +28,3 @@ A cloud-native end-to-end ETL pipeline that extracts ODI cricket rankings from t
 
 ---
 
-[Notion](https://nsr6.notion.site/Pyspark-34905b97e27e80a7a976cd786db8bd3b)*
