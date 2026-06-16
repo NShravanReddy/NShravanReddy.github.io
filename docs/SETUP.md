@@ -167,10 +167,9 @@ NShravanReddy.github.io/
 │   ├── Gemfile.lock      # Locked dependency versions
 │   ├── index.md          # Main portfolio homepage
 │   ├── _layouts/         # Custom layout overrides
-│   │   └── post.html     # Blog post layout (shows "Last modified")
+│   │   └── post.html     # Blog post layout (shows published and last modified dates)
 │   ├── _site/            # Generated output (gitignored)
 │   └── blogs/
-│       ├── _config.yml   # Blog-specific config (with Google Analytics)
 │       ├── index.md      # Blog homepage
 │       └── _posts/       # Blog posts (Markdown + frontmatter)
 ```
@@ -179,7 +178,13 @@ NShravanReddy.github.io/
 
 ## Adding Google Analytics
 
-Both `docs/_config.yml` and `docs/blogs/_config.yml` have:
+The site uses one Jekyll config for both local development and GitHub Pages:
+
+```text
+docs/_config.yml
+```
+
+That config has:
 
 ```yaml
 google_analytics: G-JLPX0QK3WW
@@ -205,7 +210,7 @@ tags: [tag1, tag2]
 ---
 ```
 
-The custom `docs/blogs/_layouts/post.html` will display "Last modified" below the published date.
+The custom `docs/_layouts/post.html` displays `Published date` and `Last modified date` inside every blog post.
 
 ---
 

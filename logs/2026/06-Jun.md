@@ -40,6 +40,14 @@ Related conversation note:
 
 * [2026-06-16_header_navigation_whitelist](conversations/2026-06-16_header_navigation_whitelist.md)
 
+### Unified Jekyll config
+
+Removed the duplicate blog-only Jekyll config and updated setup documentation so local development and GitHub Pages both use `docs/_config.yml`.
+
+Related conversation note:
+
+* [2026-06-16_unified_jekyll_config](conversations/2026-06-16_unified_jekyll_config.md)
+
 ### Jekyll local setup & LLM Agent Triton Kernels blog post
 
 Set up Jekyll local deployment (rbenv, Ruby 3.2.2, Makefile, SETUP.md), added Google Analytics (G-JLPX0QK3WW) to both configs, and created the "LLM Agent for Triton Kernels" blog post from Notion with clean markdown tables, anchor links, and proper image/reference file paths.
