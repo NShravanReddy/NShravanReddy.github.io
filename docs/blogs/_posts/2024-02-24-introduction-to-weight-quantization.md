@@ -2,6 +2,7 @@
 layout: post
 title: "Introduction to Weight Quantization"
 date: 2025-02-03
+last_modified_at: 2025-02-03
 tags: [Quantization, LLM, Deep Learning]
 ---
 

@@ -2,6 +2,7 @@
 layout: post
 title: "Fine-Tuning GPT-OSS 20B to Generate Triton GPU Kernels"
 date: 2025-10-24
+last_modified_at: 2025-10-24
 tags: [LLM, Triton, GPU, Kernel]
 ---
 

@@ -2,6 +2,7 @@
 layout: post
 title: "Cricket Analytics Pipeline"
 date: 2026-02-16
+last_modified_at: 2026-02-16
 categories: data-engineering
 permalink: /blogs/2026/02/16/cricket_analytics_pipeline/
 ---

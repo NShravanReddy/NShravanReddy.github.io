@@ -2,6 +2,7 @@
 layout: post
 title: "Introduction to Batch Processing"
 date: 2026-04-29
+last_modified_at: 2026-04-29
 tags: [Data Engineering, Batch Processing, Streaming]
 ---
 

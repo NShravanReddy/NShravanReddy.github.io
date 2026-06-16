@@ -3,6 +3,7 @@ description: "Thoughts, ideas, and observations."
 baseurl: "/blogs"                # The subpath of your blog
 url: "https://nshravanreddy.github.io"
 theme: minima
+google_analytics: G-JLPX0QK3WW
 plugins:
   - jekyll-feed
 markdown: kramdown

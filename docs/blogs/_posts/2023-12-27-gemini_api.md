@@ -1,4 +1,12 @@
-# gemini api
+---
+layout: post
+title: "Gemini API"
+date: 2023-12-27
+last_modified_at: 2023-12-27
+tags: [Gemini, API, Streamlit]
+---
+
+# Gemini API
 
 Time: December 27, 2023 11:53 AM
 Last edited time: June 15, 2026 2:50 PM
@@ -68,6 +76,5 @@ if submit:
 ---
 
 [Notion](https://app.notion.com/p/nsr6/gemini-api-4f7dbee18f5d4e7a9f443c34c1db921a)
-
 
 

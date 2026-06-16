@@ -2,6 +2,7 @@
 layout: post
 title: "Kimball's Dimensional Modelling"
 date: 2026-05-24
+last_modified_at: 2026-05-24
 tags: [Data Engineering, Data Modeling, Kimball]
 ---
 

@@ -1,10 +1,4 @@
----
-layout: post
-title: "Downloading the LLM model from Hugging Face"
-date: 2024-01-01
-last_modified_at: 2024-01-01
-tags: [LLM, HuggingFace, Setup]
----
+# Downloading the llm model from hf
 
 1.Downloading normal to cache folder 
 
@@ -44,7 +38,3 @@ snapshot_download(
     local_dir="/jupyter-tutorial/hf_models/Llama-3.2-1B-Instruct"
 )
 ```
-
-[**Downloading the LLM model from hf – full notes**](https://www.notion.so/Downloading-the-llm-model-from-hf-24e05b97e27e8028a423deb02df17484?pvs=21)
-
-

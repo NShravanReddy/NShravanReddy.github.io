@@ -2,6 +2,7 @@
 layout: post
 title: "Streaming Data Processing Pipeline"
 date: 2026-04-02
+last_modified_at: 2026-04-02
 categories: data-engineering
 permalink: /blogs/2026/04/02/streaming_data_processing_pipeline/
 ---

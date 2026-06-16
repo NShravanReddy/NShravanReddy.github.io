@@ -2,6 +2,7 @@
 layout: post
 title: "Alternative to Logi Options Plus"
 date: 2025-07-29
+last_modified_at: 2025-07-29
 tags: [macOS, Mouse, Tools]
 ---
 

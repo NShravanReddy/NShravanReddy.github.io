@@ -2,6 +2,7 @@
 layout: post
 title: "Hugging Face Chapter 2 — Behind the Pipeline"
 date: 2023-11-03
+last_modified_at: 2023-11-03
 tags: [HuggingFace, Transformers, NLP]
 ---
 

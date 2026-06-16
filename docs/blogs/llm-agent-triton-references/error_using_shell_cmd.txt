@@ -1,0 +1,251 @@
+  warnings.warn(
+[rank5]:[W906 11:11:20.733076810 ProcessGroupNCCL.cpp:4843] [PG ID 0 PG GUID 0 Rank 5]  using GPU 0 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can specify device_id in init_process_group() to force use of a particular device.
+Generating train split: 9979 examples [00:13, 746.32 examples/s] 
+[rank0]:[W906 11:11:32.151356772 ProcessGroupNCCL.cpp:4843] [PG ID 0 PG GUID 0 Rank 0]  using GPU 0 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can specify device_id in init_process_group() to force use of a particular device.
+[rank6]: Traceback (most recent call last):
+[rank6]:   File "/workspace/HF_PEFT_GPT_OSS/train.py", line 233, in <module>
+[rank6]:     main(model_args, data_args, training_args)
+[rank6]:   File "/workspace/HF_PEFT_GPT_OSS/train.py", line 180, in main
+[rank6]:     trainer = SFTTrainer(
+[rank6]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py", line 101, in inner_f
+[rank6]:     return f(*args, **kwargs)
+[rank6]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
+[rank6]:     return func(*args, **kwargs)
+[rank6]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/trl/trainer/sft_trainer.py", line 366, in __init__
+[rank6]:     with PartialState().local_main_process_first():
+[rank6]:   File "/opt/conda/envs/py_3.10/lib/python3.10/contextlib.py", line 135, in __enter__
+[rank6]:     return next(self.gen)
+[rank6]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/accelerate/state.py", line 547, in local_main_process_first
+[rank6]:     yield from self._goes_first(self.is_local_main_process)
+[rank6]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/accelerate/state.py", line 409, in _goes_first
+[rank6]:     self.wait_for_everyone()
+[rank6]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/accelerate/state.py", line 403, in wait_for_everyone
+[rank6]:     torch.distributed.barrier()
+[rank6]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+[rank6]:     return func(*args, **kwargs)
+[rank6]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py", line 4754, in barrier
+[rank6]:     work = group.barrier(opts=opts)
+[rank6]: torch.distributed.DistBackendError: NCCL error in: /var/lib/jenkins/pytorch/torch/csrc/distributed/c10d/NCCLUtils.cpp:77, invalid usage (run with NCCL_DEBUG=WARN for details), NCCL version 2.21.5
+[rank6]: ncclInvalidUsage: This usually reflects invalid usage of NCCL library.
+[rank6]: Last error:
+[rank6]: Duplicate GPU detected : rank 6 and rank 0 both on CUDA device 83000
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/workspace/HF_PEFT_GPT_OSS/train.py", line 233, in <module>
+[rank1]:     main(model_args, data_args, training_args)
+[rank1]:   File "/workspace/HF_PEFT_GPT_OSS/train.py", line 180, in main
+[rank1]:     trainer = SFTTrainer(
+[rank1]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py", line 101, in inner_f
+[rank1]:     return f(*args, **kwargs)
+[rank1]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
+[rank1]:     return func(*args, **kwargs)
+[rank1]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/trl/trainer/sft_trainer.py", line 366, in __init__
+[rank1]:     with PartialState().local_main_process_first():
+[rank1]:   File "/opt/conda/envs/py_3.10/lib/python3.10/contextlib.py", line 135, in __enter__
+[rank1]:     return next(self.gen)
+[rank1]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/accelerate/state.py", line 547, in local_main_process_first
+[rank1]:     yield from self._goes_first(self.is_local_main_process)
+[rank1]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/accelerate/state.py", line 409, in _goes_first
+[rank1]:     self.wait_for_everyone()
+[rank1]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/accelerate/state.py", line 403, in wait_for_everyone
+[rank1]:     torch.distributed.barrier()
+[rank1]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+[rank1]:     return func(*args, **kwargs)
+[rank1]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py", line 4754, in barrier
+[rank1]:     work = group.barrier(opts=opts)
+[rank1]: torch.distributed.DistBackendError: NCCL error in: /var/lib/jenkins/pytorch/torch/csrc/distributed/c10d/NCCLUtils.cpp:77, invalid usage (run with NCCL_DEBUG=WARN for details), NCCL version 2.21.5
+[rank1]: ncclInvalidUsage: This usually reflects invalid usage of NCCL library.
+[rank1]: Last error:
+[rank1]: Duplicate GPU detected : rank 1 and rank 0 both on CUDA device 83000
+[rank5]: Traceback (most recent call last):
+[rank5]:   File "/workspace/HF_PEFT_GPT_OSS/train.py", line 233, in <module>
+[rank5]:     main(model_args, data_args, training_args)
+[rank5]:   File "/workspace/HF_PEFT_GPT_OSS/train.py", line 180, in main
+[rank5]:     trainer = SFTTrainer(
+[rank5]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py", line 101, in inner_f
+[rank5]:     return f(*args, **kwargs)
+[rank5]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
+[rank5]:     return func(*args, **kwargs)
+[rank5]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/trl/trainer/sft_trainer.py", line 366, in __init__
+[rank5]:     with PartialState().local_main_process_first():
+[rank5]:   File "/opt/conda/envs/py_3.10/lib/python3.10/contextlib.py", line 135, in __enter__
+[rank5]:     return next(self.gen)
+[rank5]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/accelerate/state.py", line 547, in local_main_process_first
+[rank5]:     yield from self._goes_first(self.is_local_main_process)
+[rank5]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/accelerate/state.py", line 409, in _goes_first
+[rank5]:     self.wait_for_everyone()
+[rank5]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/accelerate/state.py", line 403, in wait_for_everyone
+[rank5]:     torch.distributed.barrier()
+[rank5]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+[rank5]:     return func(*args, **kwargs)
+[rank5]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py", line 4754, in barrier
+[rank5]:     work = group.barrier(opts=opts)
+[rank5]: torch.distributed.DistBackendError: NCCL error in: /var/lib/jenkins/pytorch/torch/csrc/distributed/c10d/NCCLUtils.cpp:77, invalid usage (run with NCCL_DEBUG=WARN for details), NCCL version 2.21.5
+[rank5]: ncclInvalidUsage: This usually reflects invalid usage of NCCL library.
+[rank5]: Last error:
+[rank5]: Duplicate GPU detected : rank 5 and rank 0 both on CUDA device 83000
+[rank4]: Traceback (most recent call last):
+[rank4]:   File "/workspace/HF_PEFT_GPT_OSS/train.py", line 233, in <module>
+[rank4]:     main(model_args, data_args, training_args)
+[rank4]:   File "/workspace/HF_PEFT_GPT_OSS/train.py", line 180, in main
+[rank4]:     trainer = SFTTrainer(
+[rank4]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py", line 101, in inner_f
+[rank4]:     return f(*args, **kwargs)
+[rank4]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
+[rank4]:     return func(*args, **kwargs)
+[rank4]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/trl/trainer/sft_trainer.py", line 366, in __init__
+[rank4]:     with PartialState().local_main_process_first():
+[rank4]:   File "/opt/conda/envs/py_3.10/lib/python3.10/contextlib.py", line 135, in __enter__
+[rank4]:     return next(self.gen)
+[rank4]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/accelerate/state.py", line 547, in local_main_process_first
+[rank4]:     yield from self._goes_first(self.is_local_main_process)
+[rank4]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/accelerate/state.py", line 409, in _goes_first
+[rank4]:     self.wait_for_everyone()
+[rank4]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/accelerate/state.py", line 403, in wait_for_everyone
+[rank4]:     torch.distributed.barrier()
+[rank4]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+[rank4]:     return func(*args, **kwargs)
+[rank4]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py", line 4754, in barrier
+[rank4]:     work = group.barrier(opts=opts)
+[rank4]: torch.distributed.DistBackendError: NCCL error in: /var/lib/jenkins/pytorch/torch/csrc/distributed/c10d/NCCLUtils.cpp:77, invalid usage (run with NCCL_DEBUG=WARN for details), NCCL version 2.21.5
+[rank4]: ncclInvalidUsage: This usually reflects invalid usage of NCCL library.
+[rank4]: Last error:
+[rank4]: Duplicate GPU detected : rank 4 and rank 0 both on CUDA device 83000
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/workspace/HF_PEFT_GPT_OSS/train.py", line 233, in <module>
+[rank0]:     main(model_args, data_args, training_args)
+[rank0]:   File "/workspace/HF_PEFT_GPT_OSS/train.py", line 180, in main
+[rank0]:     trainer = SFTTrainer(
+[rank0]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py", line 101, in inner_f
+[rank0]:     return f(*args, **kwargs)
+[rank0]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
+[rank0]:     return func(*args, **kwargs)
+[rank0]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/trl/trainer/sft_trainer.py", line 366, in __init__
+[rank0]:     with PartialState().local_main_process_first():
+[rank0]:   File "/opt/conda/envs/py_3.10/lib/python3.10/contextlib.py", line 142, in __exit__
+[rank0]:     next(self.gen)
+[rank0]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/accelerate/state.py", line 547, in local_main_process_first
+[rank0]:     yield from self._goes_first(self.is_local_main_process)
+[rank0]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/accelerate/state.py", line 414, in _goes_first
+[rank0]:     self.wait_for_everyone()
+[rank0]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/accelerate/state.py", line 403, in wait_for_everyone
+[rank0]:     torch.distributed.barrier()
+[rank0]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+[rank0]:     return func(*args, **kwargs)
+[rank0]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py", line 4754, in barrier
+[rank0]:     work = group.barrier(opts=opts)
+[rank0]: torch.distributed.DistBackendError: NCCL error in: /var/lib/jenkins/pytorch/torch/csrc/distributed/c10d/NCCLUtils.cpp:77, invalid usage (run with NCCL_DEBUG=WARN for details), NCCL version 2.21.5
+[rank0]: ncclInvalidUsage: This usually reflects invalid usage of NCCL library.
+[rank0]: Last error:
+[rank0]: Duplicate GPU detected : rank 0 and rank 1 both on CUDA device 83000
+[rank7]: Traceback (most recent call last):
+[rank7]:   File "/workspace/HF_PEFT_GPT_OSS/train.py", line 233, in <module>
+[rank7]:     main(model_args, data_args, training_args)
+[rank7]:   File "/workspace/HF_PEFT_GPT_OSS/train.py", line 180, in main
+[rank7]:     trainer = SFTTrainer(
+[rank7]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py", line 101, in inner_f
+[rank7]:     return f(*args, **kwargs)
+[rank7]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
+[rank7]:     return func(*args, **kwargs)
+[rank7]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/trl/trainer/sft_trainer.py", line 366, in __init__
+[rank7]:     with PartialState().local_main_process_first():
+[rank7]:   File "/opt/conda/envs/py_3.10/lib/python3.10/contextlib.py", line 135, in __enter__
+[rank7]:     return next(self.gen)
+[rank7]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/accelerate/state.py", line 547, in local_main_process_first
+[rank7]:     yield from self._goes_first(self.is_local_main_process)
+[rank7]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/accelerate/state.py", line 409, in _goes_first
+[rank7]:     self.wait_for_everyone()
+[rank7]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/accelerate/state.py", line 403, in wait_for_everyone
+[rank7]:     torch.distributed.barrier()
+[rank7]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+[rank7]:     return func(*args, **kwargs)
+[rank7]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py", line 4754, in barrier
+[rank7]:     work = group.barrier(opts=opts)
+[rank7]: torch.distributed.DistBackendError: NCCL error in: /var/lib/jenkins/pytorch/torch/csrc/distributed/c10d/NCCLUtils.cpp:77, invalid usage (run with NCCL_DEBUG=WARN for details), NCCL version 2.21.5
+[rank7]: ncclInvalidUsage: This usually reflects invalid usage of NCCL library.
+[rank7]: Last error:
+[rank7]: Duplicate GPU detected : rank 7 and rank 0 both on CUDA device 83000
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/workspace/HF_PEFT_GPT_OSS/train.py", line 233, in <module>
+[rank2]:     main(model_args, data_args, training_args)
+[rank2]:   File "/workspace/HF_PEFT_GPT_OSS/train.py", line 180, in main
+[rank2]:     trainer = SFTTrainer(
+[rank2]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py", line 101, in inner_f
+[rank2]:     return f(*args, **kwargs)
+[rank2]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
+[rank2]:     return func(*args, **kwargs)
+[rank2]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/trl/trainer/sft_trainer.py", line 366, in __init__
+[rank2]:     with PartialState().local_main_process_first():
+[rank2]:   File "/opt/conda/envs/py_3.10/lib/python3.10/contextlib.py", line 135, in __enter__
+[rank2]:     return next(self.gen)
+[rank2]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/accelerate/state.py", line 547, in local_main_process_first
+[rank2]:     yield from self._goes_first(self.is_local_main_process)
+[rank2]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/accelerate/state.py", line 409, in _goes_first
+[rank2]:     self.wait_for_everyone()
+[rank2]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/accelerate/state.py", line 403, in wait_for_everyone
+[rank2]:     torch.distributed.barrier()
+[rank2]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+[rank2]:     return func(*args, **kwargs)
+[rank2]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py", line 4754, in barrier
+[rank2]:     work = group.barrier(opts=opts)
+[rank2]: torch.distributed.DistBackendError: NCCL error in: /var/lib/jenkins/pytorch/torch/csrc/distributed/c10d/NCCLUtils.cpp:77, invalid usage (run with NCCL_DEBUG=WARN for details), NCCL version 2.21.5
+[rank2]: ncclInvalidUsage: This usually reflects invalid usage of NCCL library.
+[rank2]: Last error:
+[rank2]: Duplicate GPU detected : rank 2 and rank 0 both on CUDA device 83000
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/workspace/HF_PEFT_GPT_OSS/train.py", line 233, in <module>
+[rank3]:     main(model_args, data_args, training_args)
+[rank3]:   File "/workspace/HF_PEFT_GPT_OSS/train.py", line 180, in main
+[rank3]:     trainer = SFTTrainer(
+[rank3]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py", line 101, in inner_f
+[rank3]:     return f(*args, **kwargs)
+[rank3]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
+[rank3]:     return func(*args, **kwargs)
+[rank3]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/trl/trainer/sft_trainer.py", line 366, in __init__
+[rank3]:     with PartialState().local_main_process_first():
+[rank3]:   File "/opt/conda/envs/py_3.10/lib/python3.10/contextlib.py", line 135, in __enter__
+[rank3]:     return next(self.gen)
+[rank3]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/accelerate/state.py", line 547, in local_main_process_first
+[rank3]:     yield from self._goes_first(self.is_local_main_process)
+[rank3]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/accelerate/state.py", line 409, in _goes_first
+[rank3]:     self.wait_for_everyone()
+[rank3]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/accelerate/state.py", line 403, in wait_for_everyone
+[rank3]:     torch.distributed.barrier()
+[rank3]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+[rank3]:     return func(*args, **kwargs)
+[rank3]:   File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py", line 4754, in barrier
+[rank3]:     work = group.barrier(opts=opts)
+[rank3]: torch.distributed.DistBackendError: NCCL error in: /var/lib/jenkins/pytorch/torch/csrc/distributed/c10d/NCCLUtils.cpp:77, invalid usage (run with NCCL_DEBUG=WARN for details), NCCL version 2.21.5
+[rank3]: ncclInvalidUsage: This usually reflects invalid usage of NCCL library.
+[rank3]: Last error:
+[rank3]: Duplicate GPU detected : rank 3 and rank 0 both on CUDA device 83000
+[rank2]:[W906 11:11:33.921429899 ProcessGroupNCCL.cpp:1553] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank7]:[W906 11:11:33.928317700 ProcessGroupNCCL.cpp:1553] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank5]:[W906 11:11:33.942139263 ProcessGroupNCCL.cpp:1553] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank3]:[W906 11:11:33.948129210 ProcessGroupNCCL.cpp:1553] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank4]:[W906 11:11:33.964959990 ProcessGroupNCCL.cpp:1553] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank1]:[W906 11:11:33.967642479 ProcessGroupNCCL.cpp:1553] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank6]:[W906 11:11:33.967768871 ProcessGroupNCCL.cpp:1553] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank0]:[W906 11:11:34.279980731 ProcessGroupNCCL.cpp:1553] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+W0906 11:11:38.579000 941 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 984 closing signal SIGTERM
+W0906 11:11:38.580000 941 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 985 closing signal SIGTERM
+W0906 11:11:38.580000 941 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 986 closing signal SIGTERM
+W0906 11:11:38.580000 941 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 987 closing signal SIGTERM
+W0906 11:11:38.581000 941 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 988 closing signal SIGTERM
+W0906 11:11:38.581000 941 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 989 closing signal SIGTERM
+W0906 11:11:38.581000 941 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 990 closing signal SIGTERM
+E0906 11:11:38.848000 941 site-packages/torch/distributed/elastic/multiprocessing/api.py:874] failed (exitcode: 1) local_rank: 7 (pid: 991) of binary: /opt/conda/envs/py_3.10/bin/python3
+Traceback (most recent call last):
+  File "/opt/conda/envs/py_3.10/bin/accelerate", line 7, in <module>
+    sys.exit(main())
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/accelerate/commands/accelerate_cli.py", line 50, in main
+    args.func(args)
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/accelerate/commands/launch.py", line 1186, in launch_command
+    multi_gpu_launcher(args)
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/accelerate/commands/launch.py", line 815, in multi_gpu_launcher
+    distrib_run.run(args)
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/distributed/run.py", line 883, in run
+    elastic_launch(
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 139, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/opt/conda/envs/py_3.10/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 270, in launch_agent
+    raise ChildFailedError(
