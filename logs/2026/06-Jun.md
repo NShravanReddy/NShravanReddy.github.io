@@ -32,7 +32,13 @@ Related conversation note:
 
 * [2026-06-16_blog_last_modified_dates](conversations/2026-06-16_blog_last_modified_dates.md)
 
-## 2026-06-16
+### Header navigation whitelist
+
+Restricted the Minima header navigation to only the Home and Blog pages so setup/reference markdown files do not appear in every page header.
+
+Related conversation note:
+
+* [2026-06-16_header_navigation_whitelist](conversations/2026-06-16_header_navigation_whitelist.md)
 
 ### Jekyll local setup & LLM Agent Triton Kernels blog post
 

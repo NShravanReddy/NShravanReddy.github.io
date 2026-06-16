@@ -4,6 +4,9 @@ baseurl: ""
 url: "https://nshravanreddy.github.io" # This is your GitHub Pages URL
 theme: minima # You can choose a different theme if desired
 google_analytics: G-JLPX0QK3WW
+header_pages:
+  - index.md
+  - blogs/index.md
 
 # Optional settings
 markdown: kramdown
