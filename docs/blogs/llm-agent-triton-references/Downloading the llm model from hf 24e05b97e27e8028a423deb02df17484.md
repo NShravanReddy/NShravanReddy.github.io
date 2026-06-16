@@ -1,3 +1,7 @@
+---
+layout: null
+---
+
 # Downloading the llm model from hf
 
 1.Downloading normal to cache folder 

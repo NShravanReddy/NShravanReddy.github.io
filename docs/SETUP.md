@@ -1,3 +1,7 @@
+---
+layout: null
+---
+
 # Local Jekyll Blog Setup Guide
 
 This guide documents the exact steps to set up and run this Jekyll blog (powered by GitHub Pages + minima theme) on a macOS machine.
