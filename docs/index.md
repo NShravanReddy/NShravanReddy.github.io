@@ -44,18 +44,28 @@ I design,develop production-grade Airflow workflows, distributed data systems
 
 4. **AMD GPU Kernel Optimization Challenge – My Experience**  
    In April 2025, I participated in AMD's FP8 GEMM Kernel Optimization Challenge. The task involved writing high-performance matrix multiplication kernels for MI300X GPUs using the Triton framework, targeting FP8 inputs (E4M3FNUZ) and BF16 outputs with per-group scaling.  
-   [View Documentation](https://nshravanreddy.github.io/DeepLearning/)
+   [View Documentation](https://nshravanreddy.github.io/DeepLearning/triton-guide)
 
 ## Blog Posts
 
 <ul style="list-style: none; padding-left: 0;">
   {% for post in site.posts %}
   <li style="margin-bottom: 1em;">
-    <div style="color: #888;">{{ post.date | date: "%b %-d, %Y" }}</div>
-    <a href="{{ post.url }}" style="font-size: 1.1em; font-weight: 600; text-decoration: none; color: #007acc;">
+    <div style="color: #888;">
+      {{ post.date | date: "%b %-d, %Y" }}
+    </div>
+
+    <a href="{{ post.external_url | default: post.url }}"
+       style="font-size: 1.1em; font-weight: 600; text-decoration: none; color: #007acc;">
       {{ post.title }}
     </a>
   </li>
   {% endfor %}
 </ul>
-- [llama_3.2_1b_finetuning_rocm.ipynb](https://colab.research.google.com/drive/1kMcfDdielE1myo1arlFU7pqBPwU08I9B?usp=sharing)
+
+---
+
+## Repositories
+
+1. [**DeepLearning Repo Overview**](https://nshravanreddy.github.io/DeepLearning/repo-overview/)
+2. [**DSA**](https://nshravanreddy.github.io/dsa/)

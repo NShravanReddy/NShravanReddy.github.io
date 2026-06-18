@@ -97,6 +97,18 @@ Zero-shot, one-shot and few-shot, contrasted with traditional fine-tuning
 
 finetuning is continual pretraining, clinical modern bert in the ideas read research paper to implement chemistry modern bert,8 NVIDIA H100 SXM5 GPUs refers to a system containing eight NVIDIA H100 GPUs in the SXM5 form factor
 
+brew install cmake pkg-config coreutils
+
+![image](/docs/blogs/images/Screenshot%202025-03-02%20at%2011.01.45 AM.png)
+
+https://youtu.be/to_rYmCcE9A
+
+Summary
+
+completed transformer paper implementation. Taking more time to train the model like 7 hours for 1 epoch like that. Pretraining takes lot of compute and time.                                           
+
+So, going back to Post training phase fine tuning and inference
+
 Notion links: 
 
 [Transformer](https://app.notion.com/p/Transformer-21a05b97e27e8013b071ef794ccd4e71?pvs=21)

@@ -13,7 +13,7 @@ This loop automatically lists all posts in _posts/, sorted by date (newest first
   {% for post in site.posts %}
   <li style="margin-bottom: 1em;">
     <div style="color: #888;">{{ post.date | date: "%b %-d, %Y" }}</div>
-    <a href="{{ post.url }}" style="font-size: 1.1em; font-weight: 600; text-decoration: none; color: #007acc;">
+    <a href="{{ post.external_url | default: post.url }}" style="font-size: 1.1em; font-weight: 600; text-decoration: none; color: #007acc;">
       {{ post.title }}
     </a>
   </li>
