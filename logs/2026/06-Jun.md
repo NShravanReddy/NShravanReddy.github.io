@@ -65,3 +65,13 @@ Added missing `jekyll-seo-tag` gem, created `robots.txt`, and added meta descrip
 Related conversation note:
 
 * [2026-06-22_seo_fixes](conversations/2026-06-22_seo_fixes.md)
+
+## 2026-06-22
+
+### Homepage redesign and content update
+
+Complete homepage overhaul: added Experience Highlights, Skills, Certifications, Featured Data Engineering Projects (including Talend migration entry), compacted AI/ML hackathon descriptions, limited blog posts to 5 with a "View all posts" link, and renamed Repositories to Connect.
+
+Related conversation note:
+
+* [2026-06-22_homepage_update](conversations/2026-06-22_homepage_update.md)
