@@ -3,7 +3,11 @@ description: Cloud Data Engineer specializing in GCP, Apache Airflow, PySpark, a
 baseurl: ""
 url: "https://nshravanreddy.github.io" # This is your GitHub Pages URL
 theme: minima # You can choose a different theme if desired
+# Google Analytics 4 measurement ID (G-XXXXXXX)
 google_analytics: G-JLPX0QK3WW
+# Google Search Console ownership verification via meta tag
+webmaster_verifications:
+  google: google5d3786c839de3815
 header_pages:
   - index.md
   - blogs/index.md
