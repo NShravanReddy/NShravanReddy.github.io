@@ -2,6 +2,7 @@
 layout: post
 title: "Kimball's Dimensional Modelling"
 date: 2026-05-24
+description: "Kimball's dimensional modeling methodology for data warehousing - star schemas, fact tables, dimensions, and slowly changing dimensions."
 last_modified_at: 2026-05-24
 tags: [Data Engineering, Data Modeling, Kimball]
 ---

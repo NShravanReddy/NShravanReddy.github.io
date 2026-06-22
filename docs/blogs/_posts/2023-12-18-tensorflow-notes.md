@@ -2,6 +2,7 @@
 layout: post
 title: "TensorFlow Notes"
 date: 2023-12-18
+description: "Comprehensive TensorFlow notes covering tensors, Keras APIs, model building, training loops, and deployment."
 last_modified_at: 2023-12-18
 categories: [deep-learning, tensorflow]
 ---

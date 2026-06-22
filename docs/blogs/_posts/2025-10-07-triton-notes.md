@@ -2,6 +2,7 @@
 layout: post
 title: "Triton Notes"
 date: 2025-10-07
+description: "Triton programming notes - GPU kernel development, memory coalescing, tiling strategies, and performance optimization."
 last_modified_at: 2025-10-07
 tags: [Triton, GPU, Kernel, Deep Learning]
 ---

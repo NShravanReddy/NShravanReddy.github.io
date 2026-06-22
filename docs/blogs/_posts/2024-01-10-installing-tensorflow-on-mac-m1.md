@@ -2,6 +2,7 @@
 layout: post
 title: "Installing TensorFlow on Mac M1"
 date: 2024-01-10
+description: "Guide to installing TensorFlow on Apple Silicon Macs (M1/M2/M3) with Metal GPU acceleration and performance tips."
 last_modified_at: 2024-01-10
 tags: [TensorFlow, macOS, Setup, Deep Learning]
 ---

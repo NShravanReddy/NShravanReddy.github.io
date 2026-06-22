@@ -2,6 +2,7 @@
 layout: post
 title: "Hugging Face Chapter 2 — Behind the Pipeline"
 date: 2023-11-03
+description: "Behind the Hugging Face pipeline - tokenization, model loading, and inference with the Transformers library."
 last_modified_at: 2023-11-03
 tags: [HuggingFace, Transformers, NLP]
 ---

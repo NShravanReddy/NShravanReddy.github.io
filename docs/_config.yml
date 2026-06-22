@@ -1,5 +1,5 @@
 title: N Shravan Reddy
-description: A portfolio website showcasing my projects and research.
+description: Cloud Data Engineer specializing in GCP, Apache Airflow, PySpark, and scalable ETL pipelines. Portfolio featuring data engineering projects, blog posts on ML, LLMs, and distributed systems.
 baseurl: ""
 url: "https://nshravanreddy.github.io" # This is your GitHub Pages URL
 theme: minima # You can choose a different theme if desired
@@ -7,6 +7,11 @@ google_analytics: G-JLPX0QK3WW
 header_pages:
   - index.md
   - blogs/index.md
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Optional settings
 markdown: kramdown

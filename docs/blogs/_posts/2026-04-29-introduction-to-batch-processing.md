@@ -2,6 +2,7 @@
 layout: post
 title: "Introduction to Batch Processing"
 date: 2026-04-29
+description: "Introduction to batch processing architectures - ETL pipelines, batch vs streaming trade-offs, and modern data lakehouse patterns."
 last_modified_at: 2026-04-29
 tags: [Data Engineering, Batch Processing, Streaming]
 ---

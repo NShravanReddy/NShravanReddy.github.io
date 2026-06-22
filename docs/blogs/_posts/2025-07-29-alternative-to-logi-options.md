@@ -2,6 +2,7 @@
 layout: post
 title: "Alternative to Logi Options Plus"
 date: 2025-07-29
+description: "Open-source alternatives to Logi Options Plus for macOS - configuring Logitech mice with custom buttons and gestures."
 last_modified_at: 2025-07-29
 tags: [macOS, Mouse, Tools]
 ---

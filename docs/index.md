@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Home
+description: Cloud Data Engineer building scalable ETL pipelines on GCP with Airflow, PySpark, and BigQuery. Portfolio includes data engineering projects, ML/AI hackathon work, and technical blog posts.
 ---
 
 # Hi, I'm Shravan Reddy

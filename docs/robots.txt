@@ -1,0 +1,8 @@
+Sitemap: https://nshravanreddy.github.io/sitemap.xml
+
+# Allow all crawlers to crawl the entire site
+User-agent: *
+Allow: /
+
+# Disallow crawlers from hitting Jekyll's _site directory directly
+Disallow: /_site/

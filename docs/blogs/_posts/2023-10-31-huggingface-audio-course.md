@@ -2,6 +2,7 @@
 layout: post
 title: "Hugging Face Audio Course"
 date: 2023-10-31
+description: "Notes from the Hugging Face Audio Course covering speech recognition, audio classification, and transformers for audio."
 last_modified_at: 2023-10-31
 tags: [HuggingFace, Audio, NLP]
 ---

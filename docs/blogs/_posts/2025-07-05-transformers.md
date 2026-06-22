@@ -2,6 +2,7 @@
 layout: post
 title: "Transformers"
 date: 2025-07-05
+description: "Deep dive into the Transformer architecture - multi-head attention, positional encoding, layer normalization, and scaling."
 last_modified_at: 2025-07-05
 tags: [Transformers, LLM, Deep Learning]
 ---

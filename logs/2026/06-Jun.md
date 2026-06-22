@@ -55,3 +55,13 @@ Set up Jekyll local deployment (rbenv, Ruby 3.2.2, Makefile, SETUP.md), added Go
 Related conversation note:
 
 * [2026-06-16_jekyll_setup_triton_blog](conversations/2026-06-16_jekyll_setup_triton_blog.md)
+
+## 2026-06-22
+
+### SEO fixes for search engine visibility
+
+Added missing `jekyll-seo-tag` gem, created `robots.txt`, and added meta descriptions to homepage and all 27 blog posts so Google can properly index the site.
+
+Related conversation note:
+
+* [2026-06-22_seo_fixes](conversations/2026-06-22_seo_fixes.md)

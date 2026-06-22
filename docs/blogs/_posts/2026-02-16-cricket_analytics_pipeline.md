@@ -2,6 +2,7 @@
 layout: post
 title: "Cricket Analytics Pipeline"
 date: 2026-02-16
+description: "Building a cricket analytics data pipeline with Apache Airflow, Google Cloud Storage, Dataflow, BigQuery, and Pub/Sub."
 last_modified_at: 2026-02-16
 categories: data-engineering
 permalink: /blogs/2026/02/16/cricket_analytics_pipeline/

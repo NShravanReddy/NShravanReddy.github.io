@@ -2,6 +2,7 @@
 layout: post
 title: "Food Dataset & Project Full Details"
 date: 2024-12-25
+description: "Building a food dataset and fine-tuning NLP models for recipe understanding and food-related classification tasks."
 last_modified_at: 2024-12-25
 tags: [ML, Dataset, Fine-tuning, NLP]
 ---

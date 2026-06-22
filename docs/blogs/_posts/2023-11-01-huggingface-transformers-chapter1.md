@@ -2,6 +2,7 @@
 layout: post
 title: "Hugging Face Transformers Working Chapter 1"
 date: 2023-11-01
+description: "Understanding the Transformer architecture - attention mechanisms, encoders, decoders, and how Hugging Face implements them."
 last_modified_at: 2023-11-01
 tags: [HuggingFace, Transformers, NLP]
 ---

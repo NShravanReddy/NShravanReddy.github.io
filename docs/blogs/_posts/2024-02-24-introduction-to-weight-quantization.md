@@ -2,6 +2,7 @@
 layout: post
 title: "Introduction to Weight Quantization"
 date: 2025-02-03
+description: "Introduction to weight quantization for LLMs - GPTQ, AWQ, bitsandbytes, and techniques for reducing model memory footprint."
 last_modified_at: 2025-02-03
 tags: [Quantization, LLM, Deep Learning]
 ---

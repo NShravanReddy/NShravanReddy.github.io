@@ -2,6 +2,7 @@
 layout: post
 title: "Creating an LLM Agent to Write Triton Kernels"
 date: 2025-08-02
+description: "Creating an LLM agent that generates optimized Triton GPU kernels from natural language prompts using fine-tuned models."
 last_modified_at: 2026-06-16
 tags: [LLM, Triton, GPU, Kernel, Fine-tuning]
 ---

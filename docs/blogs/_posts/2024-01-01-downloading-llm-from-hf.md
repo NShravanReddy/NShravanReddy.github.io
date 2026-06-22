@@ -2,6 +2,7 @@
 layout: post
 title: "Downloading the LLM model from Hugging Face"
 date: 2024-01-01
+description: "Step-by-step guide to downloading and setting up LLMs from Hugging Face, including quantization and local inference."
 last_modified_at: 2024-01-01
 tags: [LLM, HuggingFace, Setup]
 ---

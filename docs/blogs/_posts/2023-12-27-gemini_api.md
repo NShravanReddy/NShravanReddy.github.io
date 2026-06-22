@@ -2,6 +2,7 @@
 layout: post
 title: "Gemini API"
 date: 2023-12-27
+description: "Building applications with the Google Gemini API - integration patterns, Streamlit UIs, and practical examples."
 last_modified_at: 2023-12-27
 tags: [Gemini, API, Streamlit]
 ---
