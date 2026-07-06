@@ -6,7 +6,7 @@ description: Cloud Data Engineer building production ETL/ELT pipelines on GCP wi
 
 # Hi, I'm Shravan Reddy — Cloud Data Engineer
 
-Building production data platforms on GCP with **2.5+ years** of experience designing and orchestrating ETL/ELT pipelines at scale.  
+Building production data platforms on GCP with **2.6+ years** of experience designing and orchestrating ETL/ELT pipelines at scale.  
 Google Cloud **Professional Data Engineer** certified.
 
 **Core expertise:** Apache Airflow · BigQuery · Cloud Composer · Dataflow · Pub/Sub · Python · SQL
@@ -15,10 +15,9 @@ Google Cloud **Professional Data Engineer** certified.
 
 ## Experience Highlights
 
-- **2.5+ years** building data platforms and pipelines on Google Cloud Platform
+- **2.6+ years** building data platforms and pipelines on Google Cloud Platform
 - Production **ETL/ELT pipelines** using Python, SQL, Apache Airflow, and BigQuery
 - Experience with **streaming systems** (Kafka/Redpanda, Dataflow) and **warehouse optimization**
-- **Google Cloud Professional Data Engineer** certified
 
 ---
 
