@@ -1,0 +1,379 @@
+---
+layout: post
+title: "GitLab CI/CD with Terraform on Google Cloud Using Workload Identity Federation"
+date: 2026-07-12
+description: "Step-by-step guide to setting up GitLab CI/CD pipelines with Terraform on Google Cloud using Workload Identity Federation for secure, keyless authentication."
+last_modified_at: 2026-07-12
+tags: [Terraform, GitLab, GCP, CI/CD, DevOps, Workload Identity Federation]
+---
+
+*July 12, 2026*
+
+# GitLab CI/CD with Terraform on Google Cloud Using Workload Identity Federation
+
+TerraForm is an infrastructure as a code software tool, which is used for building changing and version in the cloud and on premise resources. It will Create resources automatically.
+
+Hashi corp configuration language(HCL) human readable format
+
+To manage it uses plugins called providers to interact with different cloud providers
+
+Advantages
+
+1. track of infra
+2. easy collaboration
+3. reproducibility
+4. resources are removed
+
+It has mainly four commands
+
+1. terraform init
+2. terraform plan
+3. terraform apply
+4. terraform destroy
+
+terraform fmt - to format the code 
+
+We can create service account and get its keys then use the json file to manage infra on GCP
+
+But as a best practice use Work load Identity federation
+
+**Workload Identity Federation (WIF) is a GCP feature and tool** that lets external workloads authenticate to Google Cloud without static service account keys
+
+OIDC (OpenID Connect) is one of the primary authentication protocols supported by WIF.
+
+**Flow**
+
+GitLab Pipeline → OIDC Token →GCP IAM( GCP Workload Identity Pool) → Role (Impersonate Service Account) → Temporary Token →  GCP Access
+
+In GCP console, Go to I am and Admin and select Work load Identity Federation 
+
+#### 1. Create an identity pool
+
+![image.png](/blogs/images/image.png)
+
+#### 2.  Add provider to pool
+
+![image.png](/blogs/images/image%201.png)
+
+stuck with project , created gitlab project need to connect gitlab 
+
+![Screenshot 2026-06-08 at 2.23.27 PM.png](/blogs/images/Screenshot_2026-06-08_at_2.23.27_PM.png)
+
+Asked gemini it gave answers need to follow given in chat 
+
+These documents are used by me 
+
+https://docs.gitlab.com/ci/cloud_services/google_cloud/
+
+https://docs.gitlab.com/integration/google_cloud_iam/?utm_source=chatgpt.com#:~:text=In%20the-,OIDC,-N%20text%20box
+
+#### **3. Configure provider attributes**
+
+1. **OIDC 1 (google.subject):** Enter **`assertion.sub`**.
+2. **Additional Mappings (Click "Add mapping"):** Add these custom mappings so GCP understands which repository is talking to it:
+    - `attribute.project_path` = `assertion.project_path`
+    - `attribute.namespace_path` = `assertion.namespace_path`
+3. **Issuer URL:** Enter `https://gitlab.com`
+4. **Allowed Audiences:** Enter `https://gitlab.com` 
+    
+    ![image.png](/blogs/images/image%202.png)
+    
+5. **Attribute Condition (Crucial for Security):** If you leave this blank, *any* GitLab user on Earth could access your project. Restrict it to your specific GitLab organization or repository using a Common Expression Language (CEL) expression:Code snippet
+    
+    ```
+    assertion.project_path == "your-gitlab-username-or-group/your-repo-name"
+    ```
+    
+    ![image.png](/blogs/images/image%203.png)
+    
+6. Click **Save**. Note down your **Pool ID** and **Provider ID**.
+
+#### 4.  Link the Identity Pool to your Service Account
+
+Now, you need to tell your existing GCP Service Account (the one Terraform uses) that it is allowed to be assumed by anyone coming from that specific GitLab pool.
+
+Run this `gcloud` command (or configure it via IAM in the console):
+
+Bash
+
+```
+gcloud iam service-accounts add-iam-policy-binding YOUR_SERVICE_ACCOUNT_EMAIL \
+    --role="roles/iam.workloadIdentityUser" \
+    --member="principalSet://iam.googleapis.com/projects/YOUR_PROJECT_NUMBER/locations/global/workloadIdentityPools/YOUR_POOL_ID/attribute.project_path/your-gitlab-username-or-group/your-repo-name"
+```
+
+> 💡 *Make sure this Service Account has the required permissions (like `roles/editor` or `roles/owner`) to manage infrastructure in your project.*
+> 
+
+OR 
+
+Go to the service account and click on manage permissions
+
+![image.png](/blogs/images/image%204.png)
+
+Click on principals with access and then grant access
+
+![image.png](/blogs/images/image%205.png)
+
+In add principal
+
+principalSet://iam.googleapis.com/projects/**YOUR_GCP_PROJECT_NUMBER**/locations/global/workloadIdentityPools/**YOUR_POOL_ID**/attribute.project_path/**your-gitlab-username-or-group/your-repo-name**
+
+**YOUR_GCP_PROJECT_NUMBER -** It will be IAM , click on settings
+
+**YOUR_POOL_ID -** That we created earlier in step 1
+
+**your-gitlab-username-or-group/your-repo-name -** git lab username/reponame
+
+Assign role as Workload Identity User
+
+![image.png](/blogs/images/image%206.png)
+
+#### 5. Configure your GitLab CI/CD Pipeline (`.gitlab-ci.yml`)
+
+GitLab 15.7+ natively supports OpenID Connect tokens using the `id_tokens` keyword. Terraform natively recognizes Google Application Default Credentials generated by WIF.
+
+Create or update your `.gitlab-ci.yml` file like this in the gitlab project:
+
+YAML
+
+```
+include:
+  - template: Security/SAST.gitlab-ci.yml
+  - template: Security/Secret-Detection.gitlab-ci.yml
+
+stages:
+  - test
+  - secret-detection
+  - plan
+  - apply
+
+variables:
+  SECRET_DETECTION_ENABLED: 'true'
+
+  GCP_PROJECT_NUMBER: "123456789012"
+  GCP_POOL_ID: "your-pool-id"
+  GCP_PROVIDER_ID: "your-provider-id"
+  GCP_SERVICE_ACCOUNT: "your-service-account@your-project.iam.gserviceaccount.com"
+
+terraform_plan:
+  image:
+    name: hashicorp/terraform:light
+    entrypoint: [""]
+
+  stage: plan
+
+  id_tokens:
+    GCP_OIDC_TOKEN:
+      aud: https://gitlab.com
+
+  before_script:
+
+    # Save GitLab JWT token
+    - echo "${GCP_OIDC_TOKEN}" > .gcp_temp_token.json
+
+    # Generate WIF credential config
+    - |
+      cat > .gcp_credentials.json <<EOF
+      {
+        "type": "external_account",
+        "audience": "//iam.googleapis.com/projects/${GCP_PROJECT_NUMBER}/locations/global/workloadIdentityPools/${GCP_POOL_ID}/providers/${GCP_PROVIDER_ID}",
+        "subject_token_type": "urn:ietf:params:oauth:token-type:jwt",
+        "token_url": "https://sts.googleapis.com/v1/token",
+        "credential_source": {
+          "file": ".gcp_temp_token.json"
+        },
+        "service_account_impersonation_url": "https://iamcredentials.googleapis.com/v1/projects/-/serviceAccounts/${GCP_SERVICE_ACCOUNT}:generateAccessToken"
+      }
+      EOF
+
+    - export GOOGLE_APPLICATION_CREDENTIALS=$(pwd)/.gcp_credentials.json
+
+    - terraform init
+
+  script:
+    - terraform plan
+
+terraform_apply:
+  image:
+    name: hashicorp/terraform:light
+    entrypoint: [""]
+
+  stage: apply
+
+  id_tokens:
+    GCP_OIDC_TOKEN:
+      aud: https://gitlab.com
+
+  before_script:
+
+    - echo "${GCP_OIDC_TOKEN}" > .gcp_temp_token.json
+
+    - |
+      cat > .gcp_credentials.json <<EOF
+      {
+        "type": "external_account",
+        "audience": "//iam.googleapis.com/projects/${GCP_PROJECT_NUMBER}/locations/global/workloadIdentityPools/${GCP_POOL_ID}/providers/${GCP_PROVIDER_ID}",
+        "subject_token_type": "urn:ietf:params:oauth:token-type:jwt",
+        "token_url": "https://sts.googleapis.com/v1/token",
+        "credential_source": {
+          "file": ".gcp_temp_token.json"
+        },
+        "service_account_impersonation_url": "https://iamcredentials.googleapis.com/v1/projects/-/serviceAccounts/${GCP_SERVICE_ACCOUNT}:generateAccessToken"
+      }
+      EOF
+
+    - export GOOGLE_APPLICATION_CREDENTIALS=$(pwd)/.gcp_credentials.json
+
+    - terraform init
+
+  script:
+    - terraform apply -auto-approve
+
+  only:
+    - main
+
+```
+
+### 6. How this works under the hood:
+
+1. When the pipeline runs, GitLab generates a cryptographic token (`GCP_OIDC_TOKEN`) proving its identity.
+2. Terraform reads `.gcp_credentials.json`, takes that GitLab token, and passes it to Google's Security Token Service (STS).
+3. Google checks the repository path matches your setup, validates the token, and hands back a short-lived IAM token matching your Service Account.
+4. Terraform deploys your infrastructure securely without a password ever being typed or saved.
+
+In the below image we can see terraform gcp provider code
+
+![Screenshot 2026-06-21 at 9.41.17 AM.png](/blogs/images/Screenshot_2026-06-21_at_9.41.17_AM.png)
+
+![image.png](/blogs/images/image%207.png)
+
+With only yml and main file able to create bucket on gcp 
+
+We need to create [main.tf](http://main.tf) file and don't hard code values like project id and bucket we need to use [variables.tf](http://variables.tf/) file
+
+then to store variable values beacuse if we create .tfvars file and give gcp details like prj id and bucket it will be exposed na so
+
+create also [backend.tf](http://backend.tf) file to store state file 
+
+Stores the state as an object in a configurable prefix in a pre-existing bucket on [Google Cloud Storage](https://cloud.google.com/storage/) (GCS).
+
+This backend supports [state locking](https://developer.hashicorp.com/terraform/language/state/locking) and enable [Object Versioning](https://cloud.google.com/storage/docs/object-versioning) on the GCS bucket to allow for state recovery in the case of accidental deletions and human error.
+
+So heres the new [variables.tf](http://variables.tf/) 
+
+![image.png](/blogs/images/image%208.png)
+
+Also [main.tf](http://main.tf) is changed 
+
+![image.png](/blogs/images/image%209.png)
+
+[Backend.tf](http://Backend.tf) is like below
+
+![image.png](/blogs/images/image%2010.png)
+
+Also [varibles.tf](http://varibles.tf) is created 
+
+![image.png](/blogs/images/image%2011.png)
+
+Add the below variables in **CI/CD Settings** in Project variables
+
+After that i had created a gcp bucket for storing terraform.tfstate 
+
+![Screenshot 2026-07-05 at 5.34.58 PM.png](/blogs/images/Screenshot_2026-07-05_at_5.34.58_PM.png)
+
+Stores the state as an object in a configurable prefix in a pre-existing bucket on [Google Cloud Storage](https://cloud.google.com/storage/) (GCS).
+
+This backend supports [state locking](https://developer.hashicorp.com/terraform/language/state/locking) and enable [Object Versioning](https://cloud.google.com/storage/docs/object-versioning) on the GCS bucket to allow for state recovery in the case of accidental deletions and human error.
+
+## 7. GitLab CI Variables Used
+
+Configure the following CI/CD variables in your GitLab project before running the pipeline.
+
+### GCP Variables
+
+- `GCP_PROJECT_NUMBER` – Your Google Cloud project number.
+- `GCP_POOL_ID` – The Workload Identity Pool ID created in Step 1.
+- `GCP_PROVIDER_ID` – The Workload Identity Provider ID created in Step 1.
+- `GCP_SERVICE_ACCOUNT` – The email address of the Google Cloud service account used by the GitLab CI pipeline.
+
+### Terraform Variables
+
+- `TF_STATE_BUCKET` – The name of the Google Cloud Storage bucket used to store the Terraform remote state. This bucket must be created manually before running the pipeline.
+- `TF_VAR_project_id` – The Google Cloud project ID where Terraform will provision resources.
+- `TF_VAR_bucket_name` – The name of the Google Cloud Storage bucket that Terraform will create or manage.
+
+Above three variables like Gcp bucket details are stored as masked and hidden and flagged as protected variable
+
+![image.png](/blogs/images/image%2012.png)
+
+Check my repo for the new updated yml file: [https://gitlab.com/nsrdata/terraform-gcp](https://gitlab.com/nsrdata/terraform-gcp)
+
+After updating the yml file and all other files pipeline will run automatically
+
+Here's a snapshot of the pipeline after a successful run:
+
+![image.png](/blogs/images/image%2013.png)
+
+Finally statefile is stored in the bucket
+
+![image.png](/blogs/images/image%2014.png)
+
+## **Questions**
+
+## 1. What is Terraform state file?
+
+Terraform state file (`terraform.tfstate`) is a JSON file that stores:
+
+- created resources (bucket, VM, etc.)
+- metadata of infra
+- mapping between code and real cloud resources
+
+## 2. Where is state file in GitLab?
+
+If NOT configured backend:
+
+- state is stored locally in GitLab runner memory
+- deleted after job finishes
+
+If backend is configured:
+
+- stored in GCS bucket
+
+Example:
+gs://tf-state-bucket/dev/state/default.tfstate
+
+## 3. Will terraform apply create bucket every time?
+
+No.
+Terraform compares state vs code and only updates changes.
+
+## 4. Why backend is needed?
+
+- shared state
+- avoids duplicate resources
+- CI/CD safe
+
+## Complete Code
+
+You can find the complete source code for this implementation in my GitLab repository:
+
+**GitLab Repository:** [https://gitlab.com/nsrdata/terraform-gcp](https://gitlab.com/nsrdata/terraform-gcp)
+
+If you'd like to clone the repository locally using SSH and VS Code, check out my blog:
+
+[Accessing a GitLab Repository Locally in VS Code Using SSH](../2026/07/05/accessing-gitlab-repository-locally-in-vs-code.html)
+
+## Acknowledgements
+
+This implementation was inspired by and builds upon the excellent work by Harshal Thakur:
+
+- [https://medium.com/@cloudwithharshal/creating-pipelines-using-gitlab-ci-for-terraform-and-gcp-dev-environment-565d3f70ce8f](https://medium.com/@cloudwithharshal/creating-pipelines-using-gitlab-ci-for-terraform-and-gcp-dev-environment-565d3f70ce8f)
+
+## Next Steps
+
+In a future article, I plan to extend this setup by implementing a multi-environment GitLab CI/CD pipeline (Development, Staging, and Production) similar to the approach described below:
+
+- [https://medium.com/@andersondario/creating-pipelines-using-gitlab-ci-for-terraform-and-gcp-ecb4c8f58e66](https://medium.com/@andersondario/creating-pipelines-using-gitlab-ci-for-terraform-and-gcp-ecb4c8f58e66)
+
+Stay tuned for the next part of this series!
