@@ -364,16 +364,21 @@ If you'd like to clone the repository locally using SSH and VS Code, check out m
 
 [Accessing a GitLab Repository Locally in VS Code Using SSH](../2026/07/05/accessing-gitlab-repository-locally-in-vs-code.html)
 
+You can also read this article on:
+🌐 [Personal Blog](https://nshravanreddy.github.io/blogs/2026/07/12/gitlab-ci-cd-terraform-gcp-workload-identity-federation/)
+📖 [Medium](https://medium.com/@nshravanreddy6/gitlab-ci-cd-with-terraform-on-google-cloud-using-workload-identity-federation-2a5fd97874c6)
+📝 [Notion](https://nsr6.notion.site/GitLab-CI-CD-with-Terraform-on-Google-Cloud-Using-Workload-Identity-Federation-39405b97e27e80d89368f70c58c15267?source=copy_link)
+
 ## Acknowledgements
 
 This implementation was inspired by and builds upon the excellent work by Harshal Thakur:
 
-- [https://medium.com/@cloudwithharshal/creating-pipelines-using-gitlab-ci-for-terraform-and-gcp-dev-environment-565d3f70ce8f](https://medium.com/@cloudwithharshal/creating-pipelines-using-gitlab-ci-for-terraform-and-gcp-dev-environment-565d3f70ce8f)
+- [Reference blog](https://medium.com/@cloudwithharshal/creating-pipelines-using-gitlab-ci-for-terraform-and-gcp-dev-environment-565d3f70ce8f)
 
 ## Next Steps
 
 In a future article, I plan to extend this setup by implementing a multi-environment GitLab CI/CD pipeline (Development, Staging, and Production) similar to the approach described below:
 
-- [https://medium.com/@andersondario/creating-pipelines-using-gitlab-ci-for-terraform-and-gcp-ecb4c8f58e66](https://medium.com/@andersondario/creating-pipelines-using-gitlab-ci-for-terraform-and-gcp-ecb4c8f58e66)
+- [Next blog](https://medium.com/@andersondario/creating-pipelines-using-gitlab-ci-for-terraform-and-gcp-ecb4c8f58e66)
 
 Stay tuned for the next part of this series!
