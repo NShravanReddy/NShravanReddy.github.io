@@ -69,7 +69,7 @@ Orchestrated migration of legacy Talend workflows to Apache Airflow DAGs on Clou
   {% endfor %}
 </ul>
 
-[View all posts →](/blogs/)
+[View all blogs →](/blogs/)
 
 ---
 
