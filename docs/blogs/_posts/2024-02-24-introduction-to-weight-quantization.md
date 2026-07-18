@@ -91,9 +91,10 @@ A script is provided to quantize models. Converting large models can be somewhat
 
 [ExLlamaV2 Guide](https://mlabonne.github.io/blog/posts/ExLlamaV2_The_Fastest_Library_to_Run%C2%A0LLMs.html)
 
-Reduces the amount of bits required to represent each parameter, converting floating point into integers.
 
-![image.png](/blogs/images/image.png)
+
+![image.png](/blogs/images/weight_quantization.png)
+Reduces the amount of bits required to represent each parameter, converting floating point into integers.
 ![Screenshot 2025-02-08 at 3.50.55 PM.png](/blogs/images/Screenshot_2025-02-08_at_3.50.55_PM.png)
 ![Screenshot 2025-02-08 at 3.52.35 PM.png](/blogs/images/Screenshot_2025-02-08_at_3.52.35_PM.png)
 

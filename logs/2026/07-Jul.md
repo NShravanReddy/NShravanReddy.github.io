@@ -23,3 +23,15 @@ Created a new blog post "GitLab CI/CD with Terraform on Google Cloud Using Workl
 Related conversation note:
 
 * [2026-07-12_blog_gitlab_terraform_gcp](conversations/2026-07-12_blog_gitlab_terraform_gcp.md)
+
+---
+
+## 2026-07-18
+
+### RSS feed fixed to show all blog posts
+
+Created `docs/feed.xml` to override jekyll-feed's default 10-post limit. GitHub Pages builds with Jekyll 3.10.0 (not 4.4 as in Gemfile), and the older jekyll-feed gem had a default `limit: 10` in its embedded template. The custom feed template iterates over all `site.posts` without a limit.
+
+Related conversation note:
+
+* [2026-07-18_rss_feed_fix](conversations/2026-07-18_rss_feed_fix.md)
