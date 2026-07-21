@@ -35,3 +35,15 @@ Created `docs/feed.xml` to override jekyll-feed's default 10-post limit. GitHub 
 Related conversation note:
 
 * [2026-07-18_rss_feed_fix](conversations/2026-07-18_rss_feed_fix.md)
+
+---
+
+## 2026-07-21
+
+### UV blog post — code formatting and link fixes
+
+Formatted code blocks with proper markdown (```) in the UV blog post, fixed broken activate path (`/bin/activate` → `satvick/bin/activate`), added section headers, and converted plain text URLs to proper markdown links.
+
+Related conversation note:
+
+* [2026-07-21_uv_blog_code_formatting](conversations/2026-07-21_uv_blog_code_formatting.md)

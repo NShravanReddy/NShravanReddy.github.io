@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Blog
+title: Blogs
 ---
 
 <h2 style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 0;">
