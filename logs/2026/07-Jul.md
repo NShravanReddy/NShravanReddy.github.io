@@ -47,3 +47,15 @@ Formatted code blocks with proper markdown (```) in the UV blog post, fixed brok
 Related conversation note:
 
 * [2026-07-21_uv_blog_code_formatting](conversations/2026-07-21_uv_blog_code_formatting.md)
+
+---
+
+## 2026-07-25
+
+### Blog post created — Installing Spark
+
+Created a new blog post "Installing Spark" from an exported Notion file. Added proper Jekyll frontmatter, Table of Contents, and moved 8 images to `docs/blogs/images/` with unique names to avoid conflicts. Fixed image paths, numbering, and improved the closing paragraph.
+
+Related conversation note:
+
+* [2026-07-25_installing_spark_blog_post](conversations/2026-07-25_installing_spark_blog_post.md)
