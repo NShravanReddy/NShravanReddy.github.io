@@ -100,7 +100,7 @@ finetuning is continual pretraining, clinical modern bert in the ideas read rese
 
 brew install cmake pkg-config coreutils
 
-![image](/docs/blogs/images/Screenshot%202025-03-02%20at%2011.01.45 AM.png)
+![image](/blogs/images/Screenshot%202025-03-02%20at%2011.01.45%E2%80%AFAM.png)
 
 https://youtu.be/to_rYmCcE9A
 
