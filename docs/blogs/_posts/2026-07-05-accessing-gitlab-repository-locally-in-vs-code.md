@@ -9,8 +9,6 @@ tags: [GitLab, SSH, VS Code, DevOps]
 
 *July 5, 2026*
 
-# Accessing a GitLab Repository Locally in VS Code Using SSH
-
 ## Step 1: Generate a new SSH key
 
 I recommend creating a dedicated key for GitLab.
@@ -172,4 +170,6 @@ git clone {give your ssh url}
 
 ---
 
-[Notion](https://nsr6.notion.site/Accessing-a-GitLab-Repository-Locally-in-VS-Code-Using-SSH-38605b97e27e8077bcf4f5165cbe65b8?source=copy_link)
+You can also read this article on:
+🌐 [Personal Blog](https://nshravanreddy.github.io/blogs/2026/07/05/accessing-gitlab-repository-locally-in-vs-code/)
+📝 [Notion](https://nsr6.notion.site/Accessing-a-GitLab-Repository-Locally-in-VS-Code-Using-SSH-38605b97e27e8077bcf4f5165cbe65b8?source=copy_link)

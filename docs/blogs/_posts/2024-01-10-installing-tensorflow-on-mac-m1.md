@@ -50,5 +50,7 @@ conda install jupyter pandas numpy matplotlib scikit-learn
 
 ---
 
-[Notion](https://app.notion.com/p/nsr6/Installing-tensor-flow-on-Mac-m1-629604ff25274165b0d23c0cbdb064d0)
+You can also read this article on:
+🌐 [Personal Blog](https://nshravanreddy.github.io/blogs/2024/01/10/installing-tensorflow-on-mac-m1/)
+📝 [Notion](https://app.notion.com/p/nsr6/Installing-tensor-flow-on-Mac-m1-629604ff25274165b0d23c0cbdb064d0)
 

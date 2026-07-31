@@ -76,6 +76,8 @@ if submit:
 
 ---
 
-[Notion](https://app.notion.com/p/nsr6/gemini-api-4f7dbee18f5d4e7a9f443c34c1db921a)
+You can also read this article on:
+🌐 [Personal Blog](https://nshravanreddy.github.io/blogs/2023/12/27/gemini_api/)
+📝 [Notion](https://app.notion.com/p/nsr6/gemini-api-4f7dbee18f5d4e7a9f443c34c1db921a)
 
 

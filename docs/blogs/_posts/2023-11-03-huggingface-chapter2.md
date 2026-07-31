@@ -71,5 +71,7 @@ output = model(model_inputs)
 
 ---
 
-[Notion](https://app.notion.com/p/nsr6/Hugging-face-chapter-2-37f05b97e27e80b99697e277c3f5bfc9)
+You can also read this article on:
+🌐 [Personal Blog](https://nshravanreddy.github.io/blogs/2023/11/03/huggingface-chapter2/)
+📝 [Notion](https://app.notion.com/p/nsr6/Hugging-face-chapter-2-37f05b97e27e80b99697e277c3f5bfc9)
 

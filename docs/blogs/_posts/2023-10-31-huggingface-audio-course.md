@@ -77,5 +77,7 @@ It does the job:
 
 ---
 
-[Notion](https://app.notion.com/p/nsr6/Hugging-face-audio-course-37f05b97e27e806f8e05e8532a87a72d)
+You can also read this article on:
+🌐 [Personal Blog](https://nshravanreddy.github.io/blogs/2023/10/31/huggingface-audio-course/)
+📝 [Notion](https://app.notion.com/p/nsr6/Hugging-face-audio-course-37f05b97e27e806f8e05e8532a87a72d)
 

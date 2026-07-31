@@ -110,9 +110,7 @@ completed transformer paper implementation. Taking more time to train the model 
 
 So, going back to Post training phase fine tuning and inference
 
-Notion links: 
-
-[Transformer](https://app.notion.com/p/Transformer-21a05b97e27e8013b071ef794ccd4e71?pvs=21)
-
-
-[Transformers](https://app.notion.com/p/nsr6/Transformers-22605b97e27e801eb5f9d31fb0af8d85?source=copy_link)
+You can also read this article on:
+🌐 [Personal Blog](https://nshravanreddy.github.io/blogs/2025/07/05/transformers/)
+📝 [Transformer](https://app.notion.com/p/Transformer-21a05b97e27e8013b071ef794ccd4e71?pvs=21)
+📝 [Transformers](https://app.notion.com/p/nsr6/Transformers-22605b97e27e801eb5f9d31fb0af8d85?source=copy_link)

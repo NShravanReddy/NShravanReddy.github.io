@@ -53,5 +53,7 @@ A **dimension table** stores descriptive information about business entities. It
 
 ---
 
-[Notion](https://nsr6.notion.site/Kimball-s-Dimensional-Modelling-36205b97e27e808db853dfaf8f9ec989)
+You can also read this article on:
+🌐 [Personal Blog](https://nshravanreddy.github.io/blogs/2026/05/24/kimball-dimensional-modelling/)
+📝 [Notion](https://nsr6.notion.site/Kimball-s-Dimensional-Modelling-36205b97e27e808db853dfaf8f9ec989)
 

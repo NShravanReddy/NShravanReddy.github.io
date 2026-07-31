@@ -331,4 +331,6 @@ mape = np.abs(errors / x_valid).mean()
 [https://github.com/alexeygrigorev/keras-image-helper](https://github.com/alexeygrigorev/keras-image-helper)
 
 
-[Notion](https://app.notion.com/p/nsr6/2bc1c8d79a65489aa77b2c842d1a0d1b)
+You can also read this article on:
+🌐 [Personal Blog](https://nshravanreddy.github.io/blogs/2023/12/18/tensorflow-notes/)
+📝 [Notion](https://app.notion.com/p/nsr6/2bc1c8d79a65489aa77b2c842d1a0d1b)

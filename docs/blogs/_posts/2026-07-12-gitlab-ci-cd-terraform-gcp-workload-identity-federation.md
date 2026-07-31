@@ -1,15 +1,13 @@
 ---
 layout: post
-title: "GitLab CI/CD with Terraform on Google Cloud Using Workload Identity Federation"
+title: "How to Authenticate GitLab CI/CD to Google Cloud Without Service Account Keys Using Workload Identity Federation"
 date: 2026-07-12
 description: "Step-by-step guide to setting up GitLab CI/CD pipelines with Terraform on Google Cloud using Workload Identity Federation for secure, keyless authentication."
-last_modified_at: 2026-07-12
+last_modified_at: 2026-07-31
 tags: [Terraform, GitLab, GCP, CI/CD, DevOps, Workload Identity Federation]
 ---
 
 *July 12, 2026*
-
-# GitLab CI/CD with Terraform on Google Cloud Using Workload Identity Federation
 
 TerraForm is an infrastructure as a code software tool, which is used for building changing and version in the cloud and on premise resources. It will Create resources automatically.
 
@@ -365,7 +363,7 @@ If you'd like to clone the repository locally using SSH and VS Code, check out m
 [Accessing a GitLab Repository Locally in VS Code Using SSH](../2026/07/05/accessing-gitlab-repository-locally-in-vs-code.html)
 
 You can also read this article on:
-🌐 [Personal Blog](https://nshravanreddy.github.io/blogs/2026/07/12/gitlab-ci-cd-terraform-gcp-workload-identity-federation/)
+[Personal Blog](https://nshravanreddy.github.io/blogs/2026/07/12/gitlab-ci-cd-terraform-gcp-workload-identity-federation/)
 📖 [Medium](https://medium.com/@nshravanreddy6/gitlab-ci-cd-with-terraform-on-google-cloud-using-workload-identity-federation-2a5fd97874c6)
 📝 [Notion](https://nsr6.notion.site/GitLab-CI-CD-with-Terraform-on-Google-Cloud-Using-Workload-Identity-Federation-39405b97e27e80d89368f70c58c15267?source=copy_link)
 

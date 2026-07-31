@@ -100,4 +100,6 @@ Reduces the amount of bits required to represent each parameter, converting floa
 
 ---
 
-[Notion](https://app.notion.com/p/nsr6/2bc1c8d79a65489aa77b2c842d1a0d1b)
+You can also read this article on:
+🌐 [Personal Blog](https://nshravanreddy.github.io/blogs/2024/02/24/introduction-to-weight-quantization/)
+📝 [Notion](https://app.notion.com/p/nsr6/2bc1c8d79a65489aa77b2c842d1a0d1b)

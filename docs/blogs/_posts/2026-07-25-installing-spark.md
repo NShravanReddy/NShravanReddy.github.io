@@ -3,13 +3,11 @@ layout: post
 title: "Installing Spark"
 date: 2026-07-25
 description: "Step-by-step guide to installing Apache Spark on macOS and GitHub Codespaces using PySpark and uv."
-last_modified_at: 2026-07-25
+last_modified_at: 2026-07-31
 tags: [PySpark, Spark, Installation, Data Engineering, Big Data]
 ---
 
 *July 25, 2026*
-
-# Installing Spark
 
 ## Table of Contents
 - [Installing on macOS](#installing-on-macos)
@@ -25,82 +23,81 @@ I had already installed pycharm on my mac so, I am proceeding with creation of p
 
 1. Open pycharm and Click on New PyCharm project
 
-![PyCharm new project](/blogs/images/spark_install_1.png)
+   ![PyCharm new project](/blogs/images/spark_install_1.png)
 
 2. Select the project location. Under Interpreter Type, choose Custom Environment. For Environment, select Generate New, choose uv as the environment type, and leave the remaining settings at their default values.
 
-![PyCharm interpreter settings](/blogs/images/spark_install_2.png)
+   ![PyCharm interpreter settings](/blogs/images/spark_install_2.png)
 
-3. Install java using homebrew as spark 4 requires Java17 
+3. Install java using homebrew as spark 4 requires Java17
 
-open terminal app
+   open terminal app
 
-```bash
-brew install openjdk@17
-```
+   ```bash
+   brew install openjdk@17
+   ```
 
-![Install openjdk via brew](/blogs/images/spark_install_3.png)
+   ![Install openjdk via brew](/blogs/images/spark_install_3.png)
 
 4. For the system Java wrappers to find this JDK, symlink it with
 
-```bash
+   ```bash
+   sudo ln -sfn /opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-17.jdk
+   ```
 
-sudo ln -sfn /opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-17.jdk
-```
+5. Add the following environment variables to your `.zshrc` (or `.bash_profile`):
 
-5. Add the following environment variables to your `.zshrc` (or `.bash_profile`):
+   ```
+   export JAVA_HOME=$(brew --prefix openjdk@17)
+   export PATH="$JAVA_HOME/bin:$PATH"
+   ```
 
-```
-export JAVA_HOME=$(brew --prefix openjdk@17)
-export PATH="$JAVA_HOME/bin:$PATH"
-```
+   ![Java environment variables](/blogs/images/spark_install_java_env.png)
 
-![Java environment variables](/blogs/images/spark_install_java_env.png)
+6. check the java version
 
-6. check the java version 
+   ```bash
+   java --version
+   ```
 
-```bash
-java --version
-```
+   output will be
 
-output will be 
+   ![Java version output](/blogs/images/spark_install_java_version.png)
 
-![Java version output](/blogs/images/spark_install_java_version.png)
+7. Lets install Pyspark, come back to pycharm and open its terminal and run
 
-7. Lets install Pyspark, come back to pycharm and open its terminal and run 
+   ```bash
+   uv add pyspark
+   ```
 
-```bash
-uv add pyspark
-```
+8. Open the `pyproject.toml` file. You will see that `pyspark` has been added.
 
-8. Open the `pyproject.toml` file. You will see that `pyspark` has been added. 
-
-![pyproject.toml with pyspark](/blogs/images/spark_install_4.png)
+   ![pyproject.toml with pyspark](/blogs/images/spark_install_4.png)
 
 9. Create a sample test script
 
-```bash
-#test_pyspark.py
-import pyspark
-from pyspark.sql import SparkSession
-spark = (
-    SparkSession.builder
-    .appName("test")
-    .master("local[*]")
-    .getOrCreate()
-)
-print(f"Spark version: {spark.version}")
-print(spark.sparkContext.uiWebUrl)
-df = spark.range(100_000_000)
-print(df.count())
-input("Press Enter...")
-```
+   ```bash
+   #test_pyspark.py
+   import pyspark
+   from pyspark.sql import SparkSession
+   spark = (
+       SparkSession.builder
+       .appName("test")
+       .master("local[*]")
+       .getOrCreate()
+   )
+   print(f"Spark version: {spark.version}")
+   print(spark.sparkContext.uiWebUrl)
+   df = spark.range(100_000_000)
+   print(df.count())
+   input("Press Enter...")
+   ```
 
 10. Go to link url to see spark ui and jobs
 
-![Spark UI](/blogs/images/spark_install_5.png)
+    ![Spark UI](/blogs/images/spark_install_5.png)
 
-![Spark UI jobs](/blogs/images/spark_install_6.png)
+    ![Spark UI jobs](/blogs/images/spark_install_6.png)
 
 ## Installing on GitHub Codespaces
 
