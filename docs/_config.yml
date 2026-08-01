@@ -1,6 +1,5 @@
-title: N Shravan Reddy
-description: Cloud Data Engineer specializing in GCP, Apache Airflow, PySpark, and scalable ETL pipelines. Portfolio featuring data engineering projects, blog posts on ML, LLMs, and distributed systems.
-baseurl: ""
+title: Shravan Reddy Nadiveedi
+description: Cloud Data Engineer
 url: "https://nshravanreddy.github.io" # This is your GitHub Pages URL
 theme: minima # You can choose a different theme if desired
 # Google Analytics 4 measurement ID (G-XXXXXXX)
@@ -11,7 +10,7 @@ webmaster_verifications:
 header_pages:
   - index.md
   - blogs/index.md
-
+  
 plugins:
   - jekyll-feed
   - jekyll-seo-tag

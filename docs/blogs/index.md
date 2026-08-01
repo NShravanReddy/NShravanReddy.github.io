@@ -43,14 +43,3 @@ This loop automatically lists all posts in _posts/, sorted by date (newest first
   </li>
   {% endfor %}
 </ul>
-
----
-
-<footer>
-  <div style="text-align: center; padding: 20px; margin-top: 40px;">
-    <p>&copy; 2025 Shravan Reddy</p>
-    <div style="margin-top: 10px;">
-      <a href="https://github.com/NShravanReddy" style="margin: 0 10px; text-decoration: none; color: #333; font-size: 24px;">Github</a>
-    </div>
-  </div>
-</footer>

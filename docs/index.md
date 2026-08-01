@@ -1,19 +1,37 @@
 ---
 layout: default
 title: Home
-description: Cloud Data Engineer building production ETL/ELT pipelines on GCP with Airflow, BigQuery, Dataflow, and Pub/Sub. GCP Professional Data Engineer certified. Portfolio featuring data engineering projects, certifications, and technical blog posts.
+description: Cloud Data Engineer
 ---
 
-# Hi, I'm Shravan Reddy — Cloud Data Engineer
-
-Building production data platforms on GCP with **2.6+ years** of experience designing and orchestrating ETL/ELT pipelines at scale.  
-Google Cloud **Professional Data Engineer** certified.
-
-**Core expertise:** Apache Airflow · BigQuery · Cloud Composer · Dataflow · Pub/Sub · Python · SQL
+# Hi, I'm Shravan
+I am a Cloud Data Engineer. I build production ETL/ELT pipelines, automate data workflows, and design reliable data solutions. I like writing blogs.
 
 ---
 
-## Experience Highlights
+## Recent Blog Posts({{ site.posts | size }})
+
+<ul style="list-style: none; padding-left: 0;">
+  {% for post in site.posts limit:5 %}
+  <li style="margin-bottom: 1em;">
+    <div style="color: #888;">
+      {{ post.date | date: "%b %-d, %Y" }}
+    </div>
+
+    <a href="{{ post.external_url | default: post.url }}"
+       style="font-size: 1.1em; font-weight: 600; text-decoration: none; color: #007acc;">
+      {{ post.title }}
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+
+[View all blogs →](/blogs/)
+
+---
+
+## Professional Experience
+**Tools:** Apache Airflow · BigQuery · Cloud Composer · Dataflow · Pub/Sub · Python · SQL
 
 - **2.6+ years** building data platforms and pipelines on Google Cloud Platform
 - Production **ETL/ELT pipelines** using Python, SQL, Apache Airflow, and BigQuery
@@ -39,37 +57,16 @@ Google Cloud **Professional Data Engineer** certified.
 
 ---
 
-## Featured Data Engineering Projects
+## Data Engineering Projects
 
-### [Real-Time Streaming Pipeline](/blogs/2026/04/02/streaming_data_processing_pipeline/)
-Python · Apache Flink (PyFlink) · Kafka (Redpanda) · PostgreSQL · Docker
+- [Real-Time Streaming Pipeline](/blogs/2026/04/02/streaming_data_processing_pipeline/)
+  - Python · Apache Flink (PyFlink) · Kafka (Redpanda) · PostgreSQL · Docker
 
-### [Cricket Analytics Pipeline](/blogs/2026/02/16/cricket_analytics_pipeline/)
-Python · Apache Airflow · Google Cloud Storage · Dataflow · BigQuery · Cloud Functions · Pub/Sub
+- [Cricket Analytics Pipeline](/blogs/2026/02/16/cricket_analytics_pipeline/)
+  - Python · Apache Airflow · Google Cloud Storage · Dataflow · BigQuery · Cloud Functions · Pub/Sub
 
-### Enterprise Talend to Apache Airflow Migration
-Orchestrated migration of legacy Talend workflows to Apache Airflow DAGs on Cloud Composer; improved pipeline reliability and observability.
-
----
-
-## Latest Blog Posts
-
-<ul style="list-style: none; padding-left: 0;">
-  {% for post in site.posts limit:5 %}
-  <li style="margin-bottom: 1em;">
-    <div style="color: #888;">
-      {{ post.date | date: "%b %-d, %Y" }}
-    </div>
-
-    <a href="{{ post.external_url | default: post.url }}"
-       style="font-size: 1.1em; font-weight: 600; text-decoration: none; color: #007acc;">
-      {{ post.title }}
-    </a>
-  </li>
-  {% endfor %}
-</ul>
-
-[View all blogs →](/blogs/)
+- Enterprise Talend to Apache Airflow Migration
+  - Orchestrated migration of legacy Talend workflows to Apache Airflow DAGs on Cloud Composer, improving pipeline reliability and observability.
 
 ---
 
@@ -90,9 +87,3 @@ Orchestrated migration of legacy Talend workflows to Apache Airflow DAGs on Clou
 4. **AMD GPU Kernel Optimization Challenge**  
    Wrote high-performance FP8 GEMM kernels for MI300X GPUs using Triton with per-group scaling.  
    [Documentation](https://nshravanreddy.github.io/DeepLearning/triton-guide)
-
----
-
-## Connect
-
-[GitHub](https://github.com/NShravanReddy)
