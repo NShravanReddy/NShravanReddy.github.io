@@ -5,7 +5,7 @@ description: Cloud Data Engineer
 ---
 
 # Hi, I'm Shravan
-I am a Cloud Data Engineer. I build production ETL/ELT pipelines, automate data workflows, and design reliable data solutions. I like writing blogs.
+I am a Cloud Data Engineer with 2.7+ years of experience building production-grade ETL/ELT pipelines, automating data workflows, and designing reliable, scalable data solutions. I also write technical blogs to share what I learn and build. Check out my blogs below.
 
 ---
 
@@ -31,32 +31,34 @@ I am a Cloud Data Engineer. I build production ETL/ELT pipelines, automate data 
 ---
 
 ## Professional Experience
-**Tools:** Apache Airflow · BigQuery · Cloud Composer · Dataflow · Pub/Sub · Python · SQL
 
-- **2.6+ years** building data platforms and pipelines on Google Cloud Platform
-- Production **ETL/ELT pipelines** using Python, SQL, Apache Airflow, and BigQuery
-- Experience with **streaming systems** (Kafka/Redpanda, Dataflow) and **warehouse optimization**
+**Tools:** BigQuery · Dataproc · Dataflow · Pub/Sub · Cloud Composer · Cloud Run Functions · Airflow · Python · SQL
+
+- **2.7+ years of experience** building and maintaining data pipelines on **Google Cloud Platform (GCP)** for an **Italian telecommunications client**.
+
+- **Building ETL pipelines using** BigQuery, Airflow, Dataproc, Pub/Sub, Cloud Run Functions, Python, and SQL.
+
+- **Orchestrated the migration** of Talend workflows to **Airflow DAGs on Cloud Composer**, improving pipeline reliability, scalability, and observability.
 
 ---
 
 ## Skills
 
-**Languages:** Python, SQL  
-**Cloud:** GCP (BigQuery, Dataflow, Cloud Composer / Airflow, Pub/Sub, Cloud Storage)  
-**Orchestration:** Apache Airflow  
-**Streaming:** Kafka / Redpanda, Apache Flink  
-**ML / AI:** PyTorch, Triton, LLM fine-tuning, Hugging Face
+**Languages:** Python · SQL  
+**Cloud:** GCP · BigQuery · Dataproc · Dataflow · Pub/Sub · Cloud Storage  
+**Orchestration:** Apache Airflow · Cloud Composer  
+**Streaming:** Kafka · Redpanda · Apache Flink  
+**ML / AI:** PyTorch · Triton · LLM Fine-tuning · Hugging Face
 
 ---
 
 ## Certifications
 
-- 🏅 [Google Cloud Professional Data Engineer](https://www.credly.com/badges/e03ee059-c9c2-428a-a726-4677f304a7b0/public_url)
-- 🏅 [Google Cloud Associate Cloud Engineer](https://www.credly.com/badges/22ff9aef-345f-4e88-9d13-1faaef7a7a72/public_url)
-- 🏅 [Databricks Certified Data Engineer Associate](https://credentials.databricks.com/04d46d50-c635-486d-9a85-d934635285f9#acc.YQZmDdz0)
+[Google Cloud Professional Data Engineer](https://www.credly.com/badges/e03ee059-c9c2-428a-a726-4677f304a7b0/public_url)  
+[Google Cloud Associate Cloud Engineer](https://www.credly.com/badges/22ff9aef-345f-4e88-9d13-1faaef7a7a72/public_url)  
+[Databricks Certified Data Engineer Associate](https://credentials.databricks.com/04d46d50-c635-486d-9a85-d934635285f9#acc.YQZmDdz0)
 
 ---
-
 ## Data Engineering Projects
 
 - [Real-Time Streaming Pipeline](/blogs/2026/04/02/streaming_data_processing_pipeline/)
@@ -64,9 +66,6 @@ I am a Cloud Data Engineer. I build production ETL/ELT pipelines, automate data 
 
 - [Cricket Analytics Pipeline](/blogs/2026/02/16/cricket_analytics_pipeline/)
   - Python · Apache Airflow · Google Cloud Storage · Dataflow · BigQuery · Cloud Functions · Pub/Sub
-
-- Enterprise Talend to Apache Airflow Migration
-  - Orchestrated migration of legacy Talend workflows to Apache Airflow DAGs on Cloud Composer, improving pipeline reliability and observability.
 
 ---
 
