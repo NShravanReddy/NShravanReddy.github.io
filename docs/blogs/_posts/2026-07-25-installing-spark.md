@@ -93,11 +93,17 @@ I had already installed pycharm on my mac so, I am proceeding with creation of p
    input("Press Enter...")
    ```
 
-10. Go to link url to see spark ui and jobs
+   Now, run the code using below command 
+
+   ``` uv run python test_pyspark.py ```
+
+10 . Go to link url to see spark ui and jobs
 
     ![Spark UI](/blogs/images/spark_install_5.png)
 
     ![Spark UI jobs](/blogs/images/spark_install_6.png)
+
+---
 
 ## Installing on GitHub Codespaces
 
@@ -148,6 +154,8 @@ uv init
 uv add pyspark
 ```
 
+Create a PySpark application using below code 
+
 ```python
 #test_pyspark.py
 from pyspark.sql import SparkSession
@@ -162,7 +170,7 @@ print(df.count())
 input("Press Enter...")
 ```
 
-use this code to see job 
+use this below code to see job
 
 ```python
 #test_pyspark.py

@@ -23,3 +23,15 @@ Updated the homepage intro to highlight 2.7+ years of experience building produc
 Related conversation note:
 
 * [2026-08-16_homepage_experience_update](conversations/2026-08-16_homepage_experience_update.md)
+
+---
+
+## 2026-08-21
+
+### Spark blog post update
+
+Updated the "Installing Spark" blog post with PyCharm project creation steps for running Spark code.
+
+Related conversation note:
+
+* [2026-08-21_spark_blog_post_update](conversations/2026-08-21_spark_blog_post_update.md)
