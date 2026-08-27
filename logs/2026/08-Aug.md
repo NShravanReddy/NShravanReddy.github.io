@@ -35,3 +35,15 @@ Updated the "Installing Spark" blog post with PyCharm project creation steps for
 Related conversation note:
 
 * [2026-08-21_spark_blog_post_update](conversations/2026-08-21_spark_blog_post_update.md)
+
+---
+
+## 2026-08-27
+
+### Blog index, footer, and homepage refactor
+
+Created a shared `post-list.html` include for blog listing, grouped blog posts by year, moved RSS button styling into a reusable `.rss-btn` CSS class, added Email/LinkedIn links to the footer, and reordered the homepage projects section.
+
+Related conversation note:
+
+* [2026-08-27_blog_index_footer_homepage_refactor](conversations/2026-08-27_blog_index_footer_homepage_refactor.md)

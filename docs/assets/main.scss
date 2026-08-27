@@ -9,3 +9,35 @@
   padding-right: 30px;
   padding-left: 30px;
 }
+
+/* RSS subscribe button — reused across index.md / blogs/index.md */
+.rss-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  background: #F8F5EE;
+  border: 2.5px solid #1A1A1A;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #1A1A1A;
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  box-shadow: 0 3px 0 #1A1A1A;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.rss-btn:hover {
+  box-shadow: 0 5px 0 #1A1A1A;
+  transform: translateY(-2px);
+}
+
+.rss-btn:focus {
+  outline: 3px solid #FFB800;
+  outline-offset: 3px;
+}

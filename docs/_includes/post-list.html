@@ -1,0 +1,27 @@
+{%- comment -%}
+  Shared post-list markup, reused by the homepage (index.md) and blogs/index.md.
+
+  Usage:
+    {% include post-list.html posts=site.posts limit=5 %}
+    {% include post-list.html posts=year.items %}
+
+  Optional `limit` truncates the list (used for the homepage "Recent posts").
+  Renders each post's date, title (external_url aware, with ↗ marker),
+  and a short excerpt.
+{%- endcomment -%}
+{%- assign _posts = include.posts | default: site.posts -%}
+{%- if include.limit -%}
+  {%- assign _posts = _posts | limit: include.limit -%}
+{%- endif -%}
+<ul style="list-style: none; padding-left: 0;">
+  {%- for post in _posts limit: include.limit -%}
+  <li style="margin-bottom: 1.25em;">
+    <div style="color: #888;">{{ post.date | date: "%b %-d, %Y" }}</div>
+    <a href="{{ post.external_url | default: post.url }}"
+       style="font-size: 1.1em; font-weight: 600; text-decoration: none; color: #007acc;">
+      {{ post.title }}{% if post.external_url %} ↗{% endif %}
+    </a>
+    <div style="color: #888; margin-top: 0.25em;">{{ post.description | default: post.excerpt | strip_html | truncatewords: 25 }}</div>
+  </li>
+  {%- endfor -%}
+</ul>
