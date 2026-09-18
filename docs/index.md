@@ -5,7 +5,7 @@ description: Cloud Data Engineer
 ---
 
 # Hi, I'm Shravan
-I am a Cloud Data Engineer with 2.7+ years of experience building production-grade ETL/ELT pipelines, automating data workflows, and designing reliable, scalable data solutions. I also write technical blogs to share what I learn and build.
+I am a Cloud Data Engineer with 2.8+ years of experience building production-grade ETL/ELT pipelines, automating data workflows, and designing reliable, scalable data solutions. I also write technical blogs to share what I learn and build.
 
 ---
 
@@ -57,18 +57,22 @@ I am a Cloud Data Engineer with 2.7+ years of experience building production-gra
 
 ## AI/ML Research & Hackathons
 
-1. **AMD AI Sprint Hackathon 2025 — 4th Place**  
-   Built a Question/Answer Agent system using Qwen3-4B at IISc, sponsored by Hugging Face and Meta.  
+I have been exploring machine learning models and LLMs to understand how they work and learn more about the AI. As part of this journey, I participated in a few hackathons and worked on projects involving LLMs, GPU kernels, and Triton, which helped me gain hands-on experience and learn new areas of deep learning.
+
+1. **AMD AI Sprint Hackathon 2025 — 4th Place**
+   Built a Question/Answer Agent system using Qwen3-4B at IISc, sponsored by Hugging Face and Meta.
    [Repository](https://github.com/NShravanReddy/AMD_AI_AGENTS)
 
-2. **OpenAI Open Model Hackathon**  
-   Fine-tuned GPT-Oss-20B to generate Triton GPU kernels using a custom PEFT dataset.  
-   [Research Document](https://nsr6.notion.site/Create-an-llm-agent-to-write-triton-kernels-24205b97e27e80708b23e54cfb4b96fd)
+2. **OpenAI Open Model Hackathon**
+   Fine-tuned GPT-Oss-20B to generate Triton GPU kernels using a custom PEFT dataset.
+   [Research Document](https://nsr6.notion.site/Create-an-llm-agent-to-write-triton-kernels-24205b97e27e80708b23e54cfb4b96fd) · [Hugging Face Model](https://huggingface.co/Nadiveedishravanreddy/gpt-oss-20b-triton-kernel) · [Devpost video](https://devpost.com/software/kernel-llm)
 
 3. **LLM Kernel Agent (Cerebras x Cline Vibe Coder Hackathon)**  
    Agent that accepts natural language prompts and generates optimized Triton GPU kernel code via Cerebras Inference API.  
    [Streamlit App](https://llm-kernel.streamlit.app) · [Repository](https://github.com/NShravanReddy/LLM-Kernel-Agent/)
 
-4. **AMD GPU Kernel Optimization Challenge**  
-   Wrote high-performance FP8 GEMM kernels for MI300X GPUs using Triton with per-group scaling.  
-   [Documentation](https://nshravanreddy.github.io/DeepLearning/triton-guide)
+4. **AMD GPU Kernel Optimization & Triton Journey**
+
+   Participated in two AMD GPU kernel competitions focused on LLM inference and multi-GPU communication, working with Triton on AMD MI300X GPUs. Explored and implemented GPU kernels while building hands-on expertise in GPU kernel optimization.
+
+   [DeepLearning Repository](https://nshravanreddy.github.io/DeepLearning/) · [Triton Guide](https://nshravanreddy.github.io/DeepLearning/triton-guide/)
