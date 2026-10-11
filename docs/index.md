@@ -5,7 +5,7 @@ description: Cloud Data Engineer
 ---
 
 # Hi, I'm Shravan
-I am a Cloud Data Engineer with 2.8+ years of experience building production-grade ETL/ELT pipelines, automating data workflows, and designing reliable, scalable data solutions. I also write technical blogs to share what I learn and build.
+I am a Cloud Data Engineer with 2.9+ years of experience building production-grade ETL/ELT pipelines, automating data workflows, and designing reliable, scalable data solutions. I also write technical blogs to share what I learn and build.
 
 ---
 
@@ -29,7 +29,7 @@ I am a Cloud Data Engineer with 2.8+ years of experience building production-gra
 
 ## Professional Experience
 
-- **2.7+ years of experience** building and maintaining data pipelines on **Google Cloud Platform (GCP)** for an **Italian telecommunications client**.
+- **2.9+ years of experience** building and maintaining data pipelines on **Google Cloud Platform (GCP)** for an **Italian telecommunications client**.
 
 - **Building ETL pipelines using** BigQuery, Airflow, Dataproc, Pub/Sub, Cloud Run Functions, Python, and SQL.
 
